@@ -13,8 +13,6 @@ export const FullLayout:FC<LayoutProps> = ({children}) => {
             <Header/>
             {/* <CustomizerDrawer/> */}
 
-            <Hero/>
-
             {children}
             
             <Footer/>

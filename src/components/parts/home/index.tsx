@@ -2,10 +2,12 @@ import { WhatWeDo } from "./whatWeDo"
 import { OurServices } from "./ourServices"
 import { RelationAwards } from "./relationAwards"
 import { Reviews } from "./reviews"
+import { Hero } from "@/components/layout/fullLayout/hero"
 
 export const Home = () => {
     return (
         <div className="flex flex-col">
+            <Hero/>
 
             <WhatWeDo/>
 
