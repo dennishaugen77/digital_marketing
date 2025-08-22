@@ -5,21 +5,21 @@ import { Reviews } from "./reviews"
 import { Hero } from "@/components/layout/fullLayout/hero"
 
 export const Home = () => {
-    return (
-        <div className="flex flex-col">
-            <Hero/>
+  return (
+    <div className="flex flex-col">
+      <Hero />
 
-            <WhatWeDo/>
+      <WhatWeDo />
 
-            <div>
-                <img src="/src/assets/images/digital-marketing-agency-about-us-full-width-img.jpg"></img>
-            </div>
+      <div>
+        <img src="/src/assets/images/digital-marketing-agency-about-us-full-width-img.jpg"></img>
+      </div>
 
-            <OurServices/>
+      <OurServices />
 
-            <RelationAwards/>
+      <RelationAwards />
 
-            <Reviews/>
-        </div>
-    )
+      <Reviews />
+    </div>
+  )
 }

@@ -1,21 +1,21 @@
 import { Hero } from "./hero"
 import { Header } from "./header"
 import { Footer } from "./footer"
-import { FC } from "react";
+import { FC } from "react"
 
 interface LayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode
 }
 
-export const FullLayout:FC<LayoutProps> = ({children}) => {
-    return (
-        <div className='w-full flex flex-col relative'>
-            <Header/>
-            {/* <CustomizerDrawer/> */}
+export const FullLayout: FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="relative flex w-full flex-col">
+      <Header />
+      {/* <CustomizerDrawer/> */}
 
-            {children}
-            
-            <Footer/>
-        </div>
-    )
+      {children}
+
+      <Footer />
+    </div>
+  )
 }

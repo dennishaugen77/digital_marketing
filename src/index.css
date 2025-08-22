@@ -106,7 +106,7 @@ button:focus-visible {
 }
 
 .text-title {
-  font-size: 3.5rem
+  font-size: 3.5rem;
 }
 
 ::-webkit-scrollbar {
