@@ -1,4 +1,4 @@
-import search from '@/assets/icons/search.svg'
+import search from '@/assets/icons/svg/search.svg'
 import { cn } from '@/utils/cn';
 import { useEffect, useRef, useState } from 'react';
 

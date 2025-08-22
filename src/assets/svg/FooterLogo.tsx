@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface FooterLogoProps {
+export interface IconProps {
   color?: string
   className?: string
   style?: React.CSSProperties
 }
 
-export const FooterLogo: React.FC<FooterLogoProps> = ({ color, className, style }) => (
+export const FooterLogo: React.FC<IconProps> = ({ color, className, style }) => (
   <svg
     fill="none"
     className={"h-15 w-35" + (className ? ` ${className}` : "")}
