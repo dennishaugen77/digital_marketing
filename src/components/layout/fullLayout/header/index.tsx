@@ -1,4 +1,4 @@
-import { SearchBar } from '@/components/searchBar'
+import { SearchBar } from '@/components/atoms/searchBar'
 import logo from '@/assets/svg/logo.svg'
 import downArrowWhite from '@/assets/icons/svg/down-arrow-white.svg'
 import downArrowBlack from '@/assets/icons/svg/down-arrow-black.svg'

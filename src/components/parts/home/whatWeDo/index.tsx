@@ -1,4 +1,4 @@
-import { solutions } from "@/pages/home/dummy"
+import { solutions } from "@/pages/main/home/dummy"
 
 export const WhatWeDo = () => {
     return (
