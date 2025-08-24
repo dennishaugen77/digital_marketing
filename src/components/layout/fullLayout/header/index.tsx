@@ -1,12 +1,13 @@
 import { SearchBar } from "@/components/atoms/searchBar"
 import logo from "@/assets/svg/logo.svg"
+import { FooterLogo } from "@/assets/svg/FooterLogo"
 import downArrowWhite from "@/assets/icons/svg/down-arrow-white.svg"
 import downArrowBlack from "@/assets/icons/svg/down-arrow-black.svg"
 import { navigations } from "./dummy"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { ListIcon } from "@/assets/icons/ListIcon"
 import { cn } from "@/utils/cn"
-import { useNavigate } from "react-router"
+import { useLocation, useNavigate } from "react-router"
 
 export const Header = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -14,6 +15,7 @@ export const Header = () => {
   )
   const [openList, setList] = useState<boolean>(false)
   const navigate = useNavigate()
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,18 +31,23 @@ export const Header = () => {
     }
   }, [])
 
-  const link = (link: string, e: MouseEvent) => {
+  const link = (link: string, e:  React.MouseEvent<HTMLElement>) => {
+    setOpenDropdownIndex(null);
     navigate(link)
     e.preventDefault()
     e.stopPropagation()
   }
 
   return (
-    <div className="absolute top-0 z-30 w-full px-10">
+    <div className={cn("top-0 z-30 w-full px-10", !location.pathname.split('/').includes('blog') &&'absolute')}>
       <div className="max-width relative mx-auto flex w-full items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="py-8 pr-3">
-            <img src={logo} alt="logo" />
+            { location.pathname.split('/').includes('blog') 
+              ? <FooterLogo style={{ color: "var(--color-primary)", margin: "0 auto" }}/> 
+              : <img src={logo} alt="logo" />
+            }
+            
           </div>
           <div className="cxl:!flex hidden h-20">
             {navigations.map((item, index) => {
@@ -57,9 +64,9 @@ export const Header = () => {
                 >
                   <div
                     className="cursor-pointer"
-                    onClick={(e: any) => link(item.link, e)}
+                    onClick={(e: React.MouseEvent<HTMLElement>) => link(item.link, e)}
                   >
-                    {item.name}
+                    <p className={cn(location.pathname.split('/').includes('blog') && "text-black")}>{item.name}</p>
                     {item.type === "dropdown" &&
                       openDropdownIndex === index && (
                         <div className="border-primary absolute top-17 left-0 w-50 border-t-[3px] bg-white">
@@ -68,7 +75,7 @@ export const Header = () => {
                               <p
                                 key={elIndex}
                                 className="hover:text-primary cursor-pointer py-3 pr-7 pl-4 text-start text-black"
-                                onClick={(e: any) => link(el.link, e)}
+                                onClick={(e: React.MouseEvent<HTMLElement>) => link(el.link, e)}
                               >
                                 {el.title}
                               </p>
@@ -77,9 +84,12 @@ export const Header = () => {
                         </div>
                       )}
                   </div>
-                  {item.type === "dropdown" && (
-                    <img src={downArrowWhite} width={20} />
-                  )}
+                  {item.type === "dropdown" &&  
+                    ( !location.pathname.split('/').includes('blog')  
+                      ? <img src={downArrowWhite} width={20} />
+                      : <img src={downArrowBlack} width={20} />
+                    )
+                  }
                 </div>
               )
             })}

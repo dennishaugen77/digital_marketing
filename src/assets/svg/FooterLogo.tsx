@@ -13,7 +13,7 @@ export const FooterLogo: React.FC<IconProps> = ({
 }) => (
   <svg
     fill="none"
-    className={"h-15 w-35" + (className ? ` ${className}` : "")}
+    className={"h-8 w-35" + (className ? ` ${className}` : "")}
     viewBox="0 0 158 33"
     enableBackground="new 0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"

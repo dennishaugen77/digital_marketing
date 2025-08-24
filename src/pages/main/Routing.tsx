@@ -4,6 +4,7 @@ import { Services } from "@/pages/main/services"
 import { Branding } from "./services/branding"
 import { ROUTES } from "@/constants/routes"
 import { Navigate, Route, Routes, useParams } from "react-router-dom"
+import { Blogs } from "./blogs"
 
 // Reusable Service Page Component
 const ServicePage = () => {
@@ -27,6 +28,8 @@ export const MainRouting = () => {
 
         {/* Dynamic service route - handles all service types */}
         <Route path="/services/:serviceType" element={<ServicePage />} />
+
+        <Route path={ROUTES.MAIN.Blogs.index} element={<Blogs/>} />
       </Routes>
     </FullLayout>
   )

@@ -11,5 +11,9 @@ export const ROUTES = {
       SEO_SERVICE: "/services/seo-service",
       SOCIAL_MEDIA: "/services/social-media",
     },
+    Blogs: {
+      index: 'blog',
+      
+    }
   },
 }
