@@ -1,8 +1,6 @@
 import { SearchBar } from "@/components/atoms/searchBar"
 import logo from "@/assets/svg/logo.svg"
 import { FooterLogo } from "@/assets/icons/FooterLogo"
-import downArrowWhite from "@/assets/icons/svg/down-arrow-white.svg"
-import downArrowBlack from "@/assets/icons/svg/down-arrow-black.svg"
 import { navigations } from "./dummy"
 import { useState, useEffect, useMemo } from "react"
 import { ListIcon } from "@/assets/icons/ListIcon"
@@ -85,8 +83,8 @@ export const Header = () => {
                   </div>
                   {item.type === "dropdown" &&  
                     ( !location.pathname.split('/').includes('blog')  
-                      ? <img src={downArrowWhite} width={20} />
-                      : <img src={downArrowBlack} width={20} />
+                      ? <img src={'/svg/down-arrow-white.svg'} width={20} />
+                      : <img src={'/svg/down-arrow-black.svg'} width={20} />
                     )
                   }
                 </div>
@@ -119,7 +117,7 @@ export const Header = () => {
                 <p className="hover:text-primary flex cursor-pointer justify-between px-10 py-2 text-start text-xl">
                   {el.name}
                   {el.type === "dropdown" && (
-                    <img src={downArrowBlack} width={20} />
+                    <img src={'/icons/svg/down-arrow-black.svg'} width={20} />
                   )}
                 </p>
               </div>

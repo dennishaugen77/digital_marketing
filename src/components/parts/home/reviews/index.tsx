@@ -14,7 +14,7 @@ export const Reviews = () => {
                     return (
                       <img
                         key={index}
-                        src="/src/assets/icons/svg/star.svg"
+                        src="/svg/star.svg"
                         width={16}
                       />
                     )
@@ -22,7 +22,7 @@ export const Reviews = () => {
               </div>
               <p className="my-5 text-start text-white">{el.review}</p>
               <div className="flex items-center gap-2">
-                <img src="/src/assets/icons/svg/user.svg" width={40} />
+                <img src="/svg/user.svg" width={40} />
                 <p className="text-start text-white uppercase">{el.name}</p>
               </div>
             </div>
@@ -32,7 +32,7 @@ export const Reviews = () => {
       <div className="border-primary absolute top-0 left-1/2 grid w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 grid-cols-2 justify-between gap-5 rounded-lg border-2 bg-white p-16 md:flex md:max-w-[1200px]">
         <div className="flex flex-col items-center md:flex-row">
           <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
-            <img src="/src/assets/icons/svg/google.svg" width={40}></img>
+            <img src="/svg/google.svg" width={40}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>
@@ -41,7 +41,7 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col items-center md:flex-row">
           <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
-            <img src="/src/assets/icons/svg/google.svg" width={40}></img>
+            <img src="/svg/facebook.svg" width={30} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>
@@ -50,7 +50,7 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col items-center md:flex-row">
           <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
-            <img src="/src/assets/icons/svg/google.svg" width={40}></img>
+            <img src="/svg/map.svg" width={30} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>
@@ -59,7 +59,7 @@ export const Reviews = () => {
         </div>
         <div className="flex flex-col items-center md:flex-row">
           <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
-            <img src="/src/assets/icons/svg/google.svg" width={40}></img>
+            <img src="/svg/star.svg" width={25} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>

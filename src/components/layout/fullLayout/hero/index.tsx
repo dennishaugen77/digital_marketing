@@ -1,5 +1,3 @@
-import rightArror from "@/assets/icons/svg/right-arrow.svg"
-
 export const Hero = () => {
   return (
     <div className="relative flex h-lvh w-full flex-col bg-[url(/images/digital-marketing-agency-hero-img-bg.jpg)] bg-cover bg-center">
@@ -24,7 +22,7 @@ export const Hero = () => {
               </div>
               <div className="flex items-baseline gap-1 py-3 pl-5 text-white">
                 <p className="cursor-pointer hover:text-white/75">Learn More</p>
-                <img src={rightArror} width={12}></img>
+                <img src={'/icons/svg/right-arrow.svg'} width={12}></img>
               </div>
             </div>
           </div>

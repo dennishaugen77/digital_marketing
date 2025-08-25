@@ -1,4 +1,3 @@
-import search from "@/assets/icons/svg/search.svg"
 import { cn } from "@/utils/cn"
 import { useEffect, useRef, useState } from "react"
 
@@ -32,7 +31,7 @@ export const SearchBar = () => {
           )}
         />
         <img
-          src={search}
+          src={'/svg/search.svg'}
           width={20}
           className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer"
           onClick={() => setSpread(!isSpread)}

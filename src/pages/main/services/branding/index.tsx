@@ -38,7 +38,7 @@ export const Branding = () => {
                 Let's work together
               </p>
               <img
-                src="/src/assets/icons/svg/right-arrow-black.svg"
+                src="/svg/right-arrow-black.svg"
                 width={18}
                 className="mt-1"
               ></img>
@@ -60,7 +60,7 @@ export const Branding = () => {
               vitae cursus auctor laoreet fermentum adipiscing.
             </p>
             <img
-              src="/src/assets/icons/svg/user.svg"
+              src="/svg/user.svg"
               width={44}
               className="my-4"
             />

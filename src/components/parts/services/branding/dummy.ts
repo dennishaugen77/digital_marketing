@@ -3,19 +3,19 @@ export const approachList = [
     title: "Concept",
     detail:
       "At pellentesque pellentesque egestas enim luctus in sed urna ullamcorper accumsan ut pulvinar eu id ultricies",
-    icon: "/src/assets/icons/svg/border-none.svg",
+    icon: "/svg/border-none.svg",
   },
   {
     title: "Build",
     detail:
       "Dis interdum proin quis tempus augue interdum bibendum ornare habitant mattis mauris bibendum duis cursus venenatis",
-    icon: "/src/assets/icons/svg/bezier-curve.svg",
+    icon: "/svg/bezier-curve.svg",
   },
   {
     title: "Test",
     detail:
       "Commodo amet, eget mattis dui egestas ridiculus aenean non aliquet lorem sed nunc pulvinar mauris viverra amet cras",
-    icon: "/src/assets/icons/svg/tasks.svg",
+    icon: "/svg/tasks.svg",
   },
 ]
 
