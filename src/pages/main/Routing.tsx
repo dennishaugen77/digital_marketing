@@ -5,6 +5,7 @@ import { Branding } from "./services/branding"
 import { ROUTES } from "@/constants/routes"
 import { Navigate, Route, Routes } from "react-router-dom"
 import { BlogDetail } from "./blogs/BlogDetail"
+import { About } from "./about"
 import { Blogs } from "./blogs"
 
 export const MainRouting = () => {
@@ -23,6 +24,8 @@ export const MainRouting = () => {
 
         <Route path={ROUTES.MAIN.BLOGS.INDEX} element={<Blogs />} />
         <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail />} />
+
+        <Route path={ROUTES.MAIN.ABOUT.INDEX} element={<About/>}/>
       </Routes>
     </FullLayout>
   )
