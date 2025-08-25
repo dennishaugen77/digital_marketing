@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-primary: 'Sans';
   --color-primary: rgb(44, 44, 201);
   --color-primary-light: rgb(53, 53, 222);
   --color-background: #f4f4f5;
@@ -16,10 +15,20 @@
   --text-title1: 1.625rem;
   --text-title2: 1.375rem;
   --text-title3: 1.2rem;
+
+  --font-primary: "Heebo";
+  --font-secondary: "Montserrat";
 }
 
 @layer base {
-
+  .blue {
+    --color-primary: rgb(44, 44, 201);
+    --color-primary-light: rgb(53, 53, 222);
+  }
+  .dodger {
+    --color-primary: rgb(0, 94, 233);
+    --color-primary-light: rgb(0, 103, 255);
+  }
   .green {
     --color-primary: rgb(55, 146, 55);
     --color-primary-light: rgb(84, 180, 53);
@@ -53,10 +62,13 @@
     --color-primary: rgb(85, 17, 248);
     --color-primary-light: rgb(101, 40, 247);
   }
+  .cardet {
+    --color-primary: rgb(41, 151, 170);
+    --color-primary-light: rgb(58, 166, 185);
+  }
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -145,4 +157,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes moveIcon {
 }
