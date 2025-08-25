@@ -30,48 +30,48 @@
   .dodger {
     --color-primary: rgb(0, 94, 233);
     --color-primary-light: rgb(0, 103, 255);
-    --color-background: #E7F6FF;
+    --color-background: #e7f6ff;
   }
   .green {
     --color-primary: rgb(55, 146, 55);
     --color-primary-light: rgb(84, 180, 53);
-    --color-background: #EDFBE2;
+    --color-background: #edfbe2;
   }
   .red {
     --color-primary: rgb(204, 25, 57);
     --color-primary-light: rgb(221, 24, 59);
-    --color-background: #FFEDE6;
+    --color-background: #ffede6;
   }
   .choco {
     --color-primary: rgb(233, 140, 0);
     --color-primary-light: rgb(253, 152, 0);
-    --color-background: #FEF9E1;
+    --color-background: #fef9e1;
   }
 
   .peru {
     --color-primary: rgb(208, 154, 64);
     --color-primary-light: rgb(220, 165, 74);
-    --color-background: #FAF5E5;
+    --color-background: #faf5e5;
   }
   .seagreen {
     --color-primary: rgb(23, 142, 121);
     --color-primary-light: rgb(27, 156, 133);
-    --color-background: #EDF6EE;
+    --color-background: #edf6ee;
   }
   .orangered {
     --color-primary: rgb(241, 88, 8);
     --color-primary-light: rgb(255, 98, 16);
-    --color-background: #FEF1E4;
+    --color-background: #fef1e4;
   }
   .pink {
     --color-primary: rgb(234, 85, 157);
     --color-primary-light: rgb(251, 95, 171);
-    --color-background: #FCEEF5;
+    --color-background: #fceef5;
   }
   .indigo {
     --color-primary: rgb(85, 17, 248);
     --color-primary-light: rgb(101, 40, 247);
-    --color-background: #FEF0FF;
+    --color-background: #fef0ff;
   }
   .cardet {
     --color-primary: rgb(41, 151, 170);

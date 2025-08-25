@@ -20,6 +20,6 @@ export const ROUTES = {
     },
     CONTACT: {
       INDEX: "/contact",
-    }
+    },
   },
 }

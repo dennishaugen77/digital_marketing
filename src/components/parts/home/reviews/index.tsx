@@ -17,7 +17,9 @@ export const Reviews = () => {
               <p className="my-5 text-start text-white">{el.review}</p>
               <div className="flex items-center gap-2">
                 <img src="/svg/user.svg" width={40} />
-                <p className="text-start text-white uppercase font-secondary">{el.name}</p>
+                <p className="font-secondary text-start text-white uppercase">
+                  {el.name}
+                </p>
               </div>
             </div>
           )
@@ -29,35 +31,37 @@ export const Reviews = () => {
             <img src="/svg/google.svg" width={40}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
-            <p className="text-start text-3xl font-bold md:text-6xl font-secondary">4.8</p>
-            <p className="font-semibold font-secondary">200+ Reviews</p>
+            <p className="font-secondary text-start text-3xl font-bold md:text-6xl">
+              4.8
+            </p>
+            <p className="font-secondary font-semibold">200+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22 font-secondary">
+          <div className="bg-primary font-secondary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
             <img src="/svg/facebook.svg" width={30} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.6</p>
-            <p className="font-semibold font-secondary">400+ Reviews</p>
+            <p className="font-secondary font-semibold">400+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22 font-secondary">
+          <div className="bg-primary font-secondary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
             <img src="/svg/map.svg" width={30} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.8</p>
-            <p className="font-semibold font-secondary">100+ Reviews</p>
+            <p className="font-secondary font-semibold">100+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22 font-secondary">
+          <div className="bg-primary font-secondary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-22">
             <img src="/svg/star.svg" width={25} className="mt-2"></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
             <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>
-            <p className="font-semibold font-secondary">200+ Reviews</p>
+            <p className="font-secondary font-semibold">200+ Reviews</p>
           </div>
         </div>
       </div>

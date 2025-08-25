@@ -10,13 +10,13 @@ export const Services = () => {
         <div className="absolute right-0 h-full w-full bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
         <div className="relative mx-auto flex w-full max-w-[1200px] items-center">
           <div className="flex w-1/2 flex-col pr-16">
-            <p className="text-primary text-start font-semibold uppercase font-primary">
+            <p className="text-primary font-primary text-start font-semibold uppercase">
               Our services
             </p>
-            <p className="lg:text-title mt-8 mb-2 text-start text-5xl leading-18 font-semibold text-black font-primary">
+            <p className="lg:text-title font-primary mt-8 mb-2 text-start text-5xl leading-18 font-semibold text-black">
               Take Your Business to the next Level
             </p>
-            <p className="text-global-color2 mt-2 mb-16 text-start text-lg font-normal font-secondary">
+            <p className="text-global-color2 font-secondary mt-2 mb-16 text-start text-lg font-normal">
               Id senectus facilisi enim accumsan ac aliquam suspendisse dapibus
               morbi ut sed pellentesque elementum velit dictum
             </p>
@@ -30,7 +30,7 @@ export const Services = () => {
                   className="rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 >
                   <div className="flex justify-center">{el.icon}</div>
-                  <p className="mb-4 text-center text-xl font-semibold text-black font-primary">
+                  <p className="font-primary mb-4 text-center text-xl font-semibold text-black">
                     {el.title}
                   </p>
                 </div>
@@ -52,8 +52,12 @@ export const Services = () => {
                 )}
               >
                 <div className="w-1/2 pr-10 pl-12">
-                  <p className="text-3xl font-semibold font-primary">{el.title}</p>
-                  <p className="text-global-color2 my-7 font-secondary">{el.content}</p>
+                  <p className="font-primary text-3xl font-semibold">
+                    {el.title}
+                  </p>
+                  <p className="text-global-color2 font-secondary my-7">
+                    {el.content}
+                  </p>
                 </div>
                 <div className={cn("flex-1", !(index % 2) && "ml-14")}>
                   <img src={el.img} className="rounded-lg"></img>

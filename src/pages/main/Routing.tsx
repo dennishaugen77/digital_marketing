@@ -26,9 +26,9 @@ export const MainRouting = () => {
         <Route path={ROUTES.MAIN.BLOGS.INDEX} element={<Blogs />} />
         <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail />} />
 
-        <Route path={ROUTES.MAIN.ABOUT.INDEX} element={<About/>}/>
+        <Route path={ROUTES.MAIN.ABOUT.INDEX} element={<About />} />
 
-        <Route path={ROUTES.MAIN.CONTACT.INDEX} element={<Contact/>}/>
+        <Route path={ROUTES.MAIN.CONTACT.INDEX} element={<Contact />} />
       </Routes>
     </FullLayout>
   )

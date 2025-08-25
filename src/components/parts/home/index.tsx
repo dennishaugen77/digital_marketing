@@ -11,8 +11,11 @@ export const Home = () => {
 
       <WhatWeDo />
 
-      <div className="flex bg-background">
-        <img src="/images/digital-marketing-agency-about-us-full-width-img.jpg" className="mx-auto"></img>
+      <div className="bg-background flex">
+        <img
+          src="/images/digital-marketing-agency-about-us-full-width-img.jpg"
+          className="mx-auto"
+        ></img>
       </div>
 
       <OurServices />

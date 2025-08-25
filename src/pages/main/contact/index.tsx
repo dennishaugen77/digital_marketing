@@ -3,39 +3,55 @@ import { Hero } from "./hero"
 import { contactDetail } from "./dummy"
 
 export const Contact = () => {
-    return (
-        <div className="flex flex-col">
-            <Hero/>
-            <div className=" bg-background flex py-25 px-15">
-                <div className="max-width w-full mx-auto">
-                    <div className="flex">
-                        <div className="w-1/2 flex flex-col pr-30">
-                            <p className="text-primary text-start uppercase font-primary">Let's Make it Happens</p>
-                            <p className="text-title text-start font-semibold text-global-color3 mt-5 font-primary">Don't Hesitate To Get in Touch.</p>
-                            <p className="text-start text-global-color2 mt-5 font-secondary">Eu feugiat tincidunt vitae, tincidunt purus aliquam pharetra viverra massa vitae mi arcu tortor et cursus tempor netus sit vitae habitasse aliquam eu vel lacinia auctor sed nisl pellentesque morbi molestie condimentum.</p>
-                            <p className="text-start text-global-color3 text-2xl font-medium flex items-center gap-2 cursor-pointer group hover:text-primary mt-5 font-secondary">Email Us<RightArrow className="text-global-color group-hover:text-primary !w-5"></RightArrow></p>
-                        </div>
-                        <div className="px-16 mt-15">
-                            {
-                                Object.entries(contactDetail).map(([key, value], index) => {
-                                    return (
-                                        <div key={index} className="mb-10 flex items-start ">
-                                            <div className="pb-6 flex  gap-4"> 
-                                                {value.icon}
-                                                <div className="flex flex-col gap-4">
-                                                    <p className="text-start uppercase text-global-color2 font-medium font-primary">{key}</p>
-                                                    <p className="text-start text-global-color3 text-2xl font-secondary">{value.val}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="flex flex-col">
+      <Hero />
+      <div className="bg-background flex px-15 py-25">
+        <div className="max-width mx-auto w-full">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:w-1/2 md:pr-30">
+              <p className="text-primary font-primary text-start uppercase">
+                Let's Make it Happens
+              </p>
+              <p className="cxl:!text-title text-global-color3 font-primary mt-5 text-start text-4xl font-semibold">
+                Don't Hesitate To Get in Touch.
+              </p>
+              <p className="text-global-color2 font-secondary mt-5 text-start">
+                Eu feugiat tincidunt vitae, tincidunt purus aliquam pharetra
+                viverra massa vitae mi arcu tortor et cursus tempor netus sit
+                vitae habitasse aliquam eu vel lacinia auctor sed nisl
+                pellentesque morbi molestie condimentum.
+              </p>
+              <p className="text-global-color3 cxl:!text-2xl group hover:text-primary font-secondary mt-5 flex cursor-pointer items-center gap-2 text-start text-lg font-medium">
+                Email Us
+                <RightArrow className="text-global-color group-hover:text-primary cls:!w-5 !w-3"></RightArrow>
+              </p>
             </div>
-            
+            <div className="mt-15 md:px-16">
+              {Object.entries(contactDetail).map(([key, value], index) => {
+                return (
+                  <div
+                    key={index}
+                    className="cxl:mb-8 mb-5 flex items-start md:mb-10"
+                  >
+                    <div className="flex gap-4 pb-6">
+                      {value.icon}
+                      <div className="flex flex-col gap-4">
+                        <p className="text-global-color2 font-primary text-start text-sm font-medium uppercase md:text-base">
+                          {key}
+                        </p>
+                        <p className="text-global-color3 cxl:text-2xl font-secondary text-xm text-start">
+                          {value.val}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
