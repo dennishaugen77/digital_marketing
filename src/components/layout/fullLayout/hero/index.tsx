@@ -1,4 +1,8 @@
+import { useTheme } from "@/provider/ThemeProvider"
+
 export const Hero = () => {
+  const { fontFamily } = useTheme();
+
   return (
     <div className="relative flex h-lvh w-full flex-col bg-[url(/images/digital-marketing-agency-hero-img-bg.jpg)] bg-cover bg-center">
       <div className="bg-global-color1/70 absolute h-full w-full"></div>
@@ -8,10 +12,10 @@ export const Hero = () => {
             <p className="clg:text-start font-semibold text-white uppercase">
               welcome to delectus
             </p>
-            <p className="clg:text-start clg:leading-20 mt-8 text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
+            <p className="clg:text-start clg:leading-20 mt-8 text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28 font-primary">
               Leading Internet Marketing Agency Based on Florida.
             </p>
-            <p className="cxs:text-2xl clg:text-start mt-5 text-lg font-semibold text-white">
+            <p className="cxs:text-2xl clg:text-start mt-5 text-lg font-semibold text-white font-secondary">
               Sollicitudin eros nulla mus donec a quisque convallis integer
               condimentum volutpat felis sed aliquet netus dolor dictumst
               pellentesque.

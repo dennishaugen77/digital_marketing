@@ -1,11 +1,13 @@
 import { useTheme } from "@/provider/ThemeProvider"
 import { useEffect, useMemo, useState } from "react"
+import { Customize } from '@/assets/icons/Customize'
+import { cn } from "@/utils/cn"
 
 export const CustomizerDrawer = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { themeMode, switchTheme } = useTheme()
+  const { themeMode, switchTheme, switchFont, fontFamily } = useTheme()
   const close = () => setIsOpen(false)
-  const open = () => setIsOpen(true)
+  const open = () => setIsOpen(!isOpen)
 
   // Close on Escape
   useEffect(() => {
@@ -18,8 +20,58 @@ export const CustomizerDrawer = () => {
     return () => window.removeEventListener("keydown", onKeyDown)
   }, [])
 
+  const fonts = useMemo(
+    () => [
+      {
+        key: 'Heebo/Montserrat',
+        value: 'Heebo / Montserrat',
+      },
+      {
+        key: 'Playfair Display / Source Sans Pro',
+        value: 'Playfair Display/Source Sans Pro'
+      },
+      {
+        key: 'Poppins/Lato',
+        value: 'Poppins / Lato'
+      },
+      {
+        key: 'Montserrat/Lato',
+        value: 'Montserrat / Lato',
+      },
+      {
+        key: 'Rubik/Karia',
+        value: 'Rubik / Karia',
+      },
+      {
+        key: 'Roboto Condensed/Roboto',
+        value: 'Roboto Condensed / Roboto',
+      },
+      {
+        key: 'Merriweather/Inter',
+        value: 'Merriweather / Inter'
+      },
+      {
+        key: 'Vollkorn/Open Snas',
+        value: 'Vollkorn / Open Snas',
+      },
+      {
+        key: 'Open Sans/Work Sans',
+        value: 'Open Sans / Work Sans'
+      },
+    ],
+    []
+  )
+
   const palettes: Array<{ key: string; colors: string[] }> = useMemo(
     () => [
+      {
+        key: "blue",
+        colors: ["rgb(44, 44, 201)", "rgb(53, 53, 222)"]
+      },
+      {
+        key: "dodger",
+        colors: ["rgb(0, 94, 233)", "rgb(0, 103, 255)"],
+      },
       {
         key: "green",
         colors: ["rgb(55, 146, 55)", "rgb(84, 180, 53)"],
@@ -52,6 +104,10 @@ export const CustomizerDrawer = () => {
         key: "indigo",
         colors: ["rgb(85, 17, 248)", "rgb(101, 40, 247)"],
       },
+      {
+        key: 'cardet',
+        colors: ["rgb(41, 151, 170)", "rgb(58, 166, 185)"]
+      }
     ],
     [],
   )
@@ -72,18 +128,36 @@ export const CustomizerDrawer = () => {
   )
 
   const SectionTitle = ({ title }: { title: string }) => (
-    <div className="mb-3 text-sm font-semibold text-gray-700">{title}</div>
+    <div className="mb-3 text-sm font-semibold text-gray-700 text-start">{title}</div>
   )
 
   const FontSamples = () => (
-    <div className="grid grid-cols-5 gap-3">
-      {["Aa", "Aa", "Aa", "Aa", "Aa"].map((label, idx) => (
-        <button
-          key={idx}
-          className="flex h-10 items-center justify-center rounded-md border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
-        >
-          <span className="select-none">{label}</span>
-        </button>
+    <div className="grid grid-cols-4 gap-3">
+      {fonts.map((font, idx) => (
+        <div className="relative inline-block group">
+          <div
+            key={idx}
+            className={cn(
+              font.key === fontFamily && '!border-gray-500', 
+              "flex h-10 items-center justify-center rounded-md border border-gray-300 text-gray-700 p-[1.5px]  hover:bg-gray-50")}
+            onClick={() => switchFont(font.key)}
+          >
+            <div className={cn(
+              font.key === fontFamily && 'border-1',
+              " border-gray-200 w-full h-full flex items-center justify-center rounded-sm")}>
+              <span className="select-none">Aa</span>
+            </div>
+          </div>
+          <span className={cn(
+            idx%4 === 0 && ' !left-0',
+            idx%4 === 1 && ' !left-1/2',
+            idx%4 === 3 && ' !right-1/2',
+            idx%4 === 4 && ' !right-0',
+            "absolute whitespace-nowrap z-100 hidden group-hover:block text-xs bg-gray-700 text-white  rounded py-1 px-2 -mt-10 bottom-0 transform translate-y-7")}>
+            {font.value}
+          </span>
+        </div>
+        
       ))}
     </div>
   )
@@ -91,45 +165,55 @@ export const CustomizerDrawer = () => {
   const ColorPalettes = () => (
     <div className="grid grid-cols-4 gap-3">
       {palettes.map((p, idx) => (
-        <button
+        <div
           key={idx}
           onClick={() => switchTheme(p.key)}
-          className="flex h-10 items-center justify-center gap-2 rounded-md border border-gray-300 px-2 hover:border-gray-400 hover:bg-gray-50"
+          className={cn(themeMode === p.key && "!border-gray-500" ,"cursor-pointer h-10 flex items-center  justify-center  rounded-md border !p-[1.5px] border-gray-300 hover:bg-gray-50")}
         >
-          {p.colors.map((c, i) => (
-            <span
-              key={i}
-              className="inline-block h-3 w-3 rounded-full"
-              style={{ backgroundColor: c }}
-            />
-          ))}
-        </button>
+          <div className={cn(
+            p.key === themeMode && 'border-1',
+            "flex items-center gap-2  w-full h-full justify-center border-gray-200 rounded-sm")}>
+            {p.colors.map((c, i) => (
+              <span
+                key={i}
+                className="inline-block h-3.5 w-3.5 rounded-full"
+                style={{ backgroundColor: c }}
+              />
+            ))}
+          </div>
+          
+        </div>
       ))}
     </div>
   )
 
   return (
     <>
-      <button
-        onClick={open}
-        className="!bg-primary fixed top-1/2 right-0 z-40 -translate-y-1/2 rounded-l-md px-3 py-3 text-white shadow-lg hover:opacity-90"
+    <div className={cn("flex flex-col gap-3 fixed top-1/2 right-0 z-40 -translate-y-1/2 duration-300", isOpen && "-translate-x-58  z-41")}>
+      <div
+        className="!bg-primary relative rounded-l-md px-3 py-3 text-white shadow-lg cursor-pointer flex items-center gap-4"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="h-5 w-5"
-        >
-          <path d="M2.25 3a.75.75 0 000 1.5h1.799l.64 3.203 1.28 6.401A2.25 2.25 0 008.176 16.5h8.574a2.25 2.25 0 002.2-1.746l1.318-5.93a.75.75 0 00-.731-.924H6.42l-.35-1.75A1.5 1.5 0 004.595 3H2.25zM9 20.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm9 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-        </svg>
-      </button>
+        <img src='/svg/cart.svg' width={24}/>
+        <p className="text-white text-start">Buy now</p>
+      </div>
+
+      <div
+        onClick={open}
+        className={"!bg-white  rounded-l-md px-3 py-3 text-black hover:text-primary  shadow-lg cursor-pointer flex items-center gap-4"}
+      >
+        <Customize className="!w-5 !h-5"/>
+        <p className=" text-start">Customize</p>
+      </div>
+
+    </div>
+      
 
       {isOpen && (
         <div onClick={close} className="fixed inset-0 z-40 bg-black/40" />
       )}
 
       <aside
-        className={`fixed inset-y-0 right-0 z-50 w-[360px] transform bg-white shadow-xl transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed inset-y-0 right-0 z-50 w-[20rem] transform bg-white shadow-xl transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         role="dialog"
         aria-modal="true"
       >
@@ -149,12 +233,11 @@ export const CustomizerDrawer = () => {
           <ColorPalettes />
         </div>
 
-        {/* Footer CTA */}
         <div className="absolute right-0 bottom-0 left-0 border-t border-gray-200 bg-white p-5">
           <button className="!bg-primary h-12 w-full rounded-md font-semibold text-white shadow hover:opacity-90">
             Buy Now
           </button>
-          <button className="hover:!bg-primary mt-3 flex h-12 w-full items-center justify-center rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-white">
+          <button className="hover:!bg-primary mt-3 flex h-12 w-full items-center justify-center rounded-md !border-1 text-primary !border-primary text-gray-700 hover:bg-gray-50 hover:text-white">
             Learn how to use this template
           </button>
         </div>
