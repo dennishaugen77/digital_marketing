@@ -3,9 +3,9 @@ import React, { createContext, useContext, useState, useEffect } from "react"
 
 interface ThemeContextValue {
   themeMode: string
-  switchTheme: (newTheme: string) => void,
-  fontFamily: string,
-  switchFont: (newFont: string) => void,
+  switchTheme: (newTheme: string) => void
+  fontFamily: string
+  switchFont: (newFont: string) => void
 }
 
 const ThemeContext = createContext<ThemeContextValue>({
@@ -21,8 +21,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme")
-    const storedFont = localStorage.getItem('font')
-    
+    const storedFont = localStorage.getItem("font")
+
     if (storedTheme) {
       setThemeMode(storedTheme)
       document.documentElement.className = storedTheme
@@ -32,21 +32,37 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
     if (storedFont) {
       setFontFamily(storedFont)
-      document.documentElement.style.setProperty('--font-primary', storedFont.split('/')[0])
-      document.documentElement.style.setProperty('--font-secondary', storedFont.split('/')[1])
+      document.documentElement.style.setProperty(
+        "--font-primary",
+        storedFont.split("/")[0],
+      )
+      document.documentElement.style.setProperty(
+        "--font-secondary",
+        storedFont.split("/")[1],
+      )
     } else {
-      document.documentElement.style.setProperty('--font-primary', fontFamily.split('/')[0])
-      document.documentElement.style.setProperty('--font-secondary', fontFamily.split('/')[1])
+      document.documentElement.style.setProperty(
+        "--font-primary",
+        fontFamily.split("/")[0],
+      )
+      document.documentElement.style.setProperty(
+        "--font-secondary",
+        fontFamily.split("/")[1],
+      )
     }
+  }, [])
 
-    }, [])
-
-    
   const switchFont = (newFont: string) => {
     setFontFamily(newFont)
     localStorage.setItem("font", newFont)
-    document.documentElement.style.setProperty('--font-primary', newFont.split('/')[0])
-    document.documentElement.style.setProperty('--font-secondary', newFont.split('/')[1])
+    document.documentElement.style.setProperty(
+      "--font-primary",
+      newFont.split("/")[0],
+    )
+    document.documentElement.style.setProperty(
+      "--font-secondary",
+      newFont.split("/")[1],
+    )
   }
 
   const switchTheme = (newTheme: string) => {
@@ -56,7 +72,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <ThemeContext.Provider value={{ themeMode, switchTheme, fontFamily, switchFont }}>
+    <ThemeContext.Provider
+      value={{ themeMode, switchTheme, fontFamily, switchFont }}
+    >
       {children}
     </ThemeContext.Provider>
   )

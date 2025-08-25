@@ -59,11 +59,7 @@ export const Branding = () => {
               Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
               vitae cursus auctor laoreet fermentum adipiscing.
             </p>
-            <img
-              src="/svg/user.svg"
-              width={44}
-              className="my-4"
-            />
+            <img src="/svg/user.svg" width={44} className="my-4" />
             <p className="text-start uppercase">matthew johnson</p>
             <div className="flex items-center">
               <Starfull className="text-primary" />

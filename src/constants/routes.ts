@@ -12,8 +12,8 @@ export const ROUTES = {
       SOCIAL_MEDIA: "/services/social-media",
     },
     BLOGS: {
-      INDEX: '/blog',
-      PARAMS: '/blog/:param',
-    }
+      INDEX: "/blog",
+      PARAMS: "/blog/:param",
+    },
   },
 }

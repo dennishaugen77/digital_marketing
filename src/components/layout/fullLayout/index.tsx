@@ -11,7 +11,7 @@ export const FullLayout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="relative flex w-full flex-col">
       <Header />
-      <CustomizerDrawer/>
+      <CustomizerDrawer />
 
       {children}
 

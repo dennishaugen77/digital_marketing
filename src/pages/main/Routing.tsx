@@ -21,8 +21,8 @@ export const MainRouting = () => {
         {/* Dynamic service route - handles all service types */}
         <Route path="/services/:serviceType" element={<Branding />} />
 
-        <Route path={ROUTES.MAIN.BLOGS.INDEX} element={<Blogs/>} />
-        <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail/>}/>
+        <Route path={ROUTES.MAIN.BLOGS.INDEX} element={<Blogs />} />
+        <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail />} />
       </Routes>
     </FullLayout>
   )

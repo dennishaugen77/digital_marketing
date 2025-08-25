@@ -16,13 +16,12 @@
   --text-title2: 1.375rem;
   --text-title3: 1.2rem;
 
-  --font-primary: 'Heebo';
-  --font-secondary: 'Montserrat';
-
+  --font-primary: "Heebo";
+  --font-secondary: "Montserrat";
 }
 
 @layer base {
-  .blue {    
+  .blue {
     --color-primary: rgb(44, 44, 201);
     --color-primary-light: rgb(53, 53, 222);
   }
@@ -161,5 +160,4 @@ button:focus-visible {
 }
 
 @keyframes moveIcon {
-  
 }

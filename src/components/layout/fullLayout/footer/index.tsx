@@ -50,9 +50,7 @@ export const Footer = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col divide-y-2 divide-white">
           <div className="grid w-full grid-cols-1 gap-4 px-10 pt-24 pb-16 sm:grid-cols-2 md:grid-cols-4">
             <div className="mx-auto max-w-50">
-              <FooterLogo
-                style={{ color: "var(--color-primary)"}}
-              />
+              <FooterLogo style={{ color: "var(--color-primary)" }} />
               <p className="text-global-color2 text-center text-xl sm:text-start">
                 Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
                 vitae cursus auctor laoreet fermentum.

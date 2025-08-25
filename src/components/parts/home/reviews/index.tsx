@@ -11,13 +11,7 @@ export const Reviews = () => {
                 {Array(5)
                   .fill(0)
                   .map((_, index) => {
-                    return (
-                      <img
-                        key={index}
-                        src="/svg/star.svg"
-                        width={16}
-                      />
-                    )
+                    return <img key={index} src="/svg/star.svg" width={16} />
                   })}
               </div>
               <p className="my-5 text-start text-white">{el.review}</p>

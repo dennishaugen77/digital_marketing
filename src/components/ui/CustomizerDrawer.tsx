@@ -1,6 +1,6 @@
 import { useTheme } from "@/provider/ThemeProvider"
 import { useEffect, useMemo, useState } from "react"
-import { Customize } from '@/assets/icons/Customize'
+import { Customize } from "@/assets/icons/Customize"
 import { cn } from "@/utils/cn"
 
 export const CustomizerDrawer = () => {
@@ -23,50 +23,50 @@ export const CustomizerDrawer = () => {
   const fonts = useMemo(
     () => [
       {
-        key: 'Heebo/Montserrat',
-        value: 'Heebo / Montserrat',
+        key: "Heebo/Montserrat",
+        value: "Heebo / Montserrat",
       },
       {
-        key: 'Playfair Display / Source Sans Pro',
-        value: 'Playfair Display/Source Sans Pro'
+        key: "Playfair Display / Source Sans Pro",
+        value: "Playfair Display/Source Sans Pro",
       },
       {
-        key: 'Poppins/Lato',
-        value: 'Poppins / Lato'
+        key: "Poppins/Lato",
+        value: "Poppins / Lato",
       },
       {
-        key: 'Montserrat/Lato',
-        value: 'Montserrat / Lato',
+        key: "Montserrat/Lato",
+        value: "Montserrat / Lato",
       },
       {
-        key: 'Rubik/Karia',
-        value: 'Rubik / Karia',
+        key: "Rubik/Karia",
+        value: "Rubik / Karia",
       },
       {
-        key: 'Roboto Condensed/Roboto',
-        value: 'Roboto Condensed / Roboto',
+        key: "Roboto Condensed/Roboto",
+        value: "Roboto Condensed / Roboto",
       },
       {
-        key: 'Merriweather/Inter',
-        value: 'Merriweather / Inter'
+        key: "Merriweather/Inter",
+        value: "Merriweather / Inter",
       },
       {
-        key: 'Vollkorn/Open Snas',
-        value: 'Vollkorn / Open Snas',
+        key: "Vollkorn/Open Snas",
+        value: "Vollkorn / Open Snas",
       },
       {
-        key: 'Open Sans/Work Sans',
-        value: 'Open Sans / Work Sans'
+        key: "Open Sans/Work Sans",
+        value: "Open Sans / Work Sans",
       },
     ],
-    []
+    [],
   )
 
   const palettes: Array<{ key: string; colors: string[] }> = useMemo(
     () => [
       {
         key: "blue",
-        colors: ["rgb(44, 44, 201)", "rgb(53, 53, 222)"]
+        colors: ["rgb(44, 44, 201)", "rgb(53, 53, 222)"],
       },
       {
         key: "dodger",
@@ -105,9 +105,9 @@ export const CustomizerDrawer = () => {
         colors: ["rgb(85, 17, 248)", "rgb(101, 40, 247)"],
       },
       {
-        key: 'cardet',
-        colors: ["rgb(41, 151, 170)", "rgb(58, 166, 185)"]
-      }
+        key: "cardet",
+        colors: ["rgb(41, 151, 170)", "rgb(58, 166, 185)"],
+      },
     ],
     [],
   )
@@ -128,36 +128,44 @@ export const CustomizerDrawer = () => {
   )
 
   const SectionTitle = ({ title }: { title: string }) => (
-    <div className="mb-3 text-sm font-semibold text-gray-700 text-start">{title}</div>
+    <div className="mb-3 text-start text-sm font-semibold text-gray-700">
+      {title}
+    </div>
   )
 
   const FontSamples = () => (
     <div className="grid grid-cols-4 gap-3">
       {fonts.map((font, idx) => (
-        <div className="relative inline-block group">
+        <div className="group relative inline-block">
           <div
             key={idx}
             className={cn(
-              font.key === fontFamily && '!border-gray-500', 
-              "flex h-10 items-center justify-center rounded-md border border-gray-300 text-gray-700 p-[1.5px]  hover:bg-gray-50")}
+              font.key === fontFamily && "!border-gray-500",
+              "flex h-10 items-center justify-center rounded-md border border-gray-300 p-[1.5px] text-gray-700 hover:bg-gray-50",
+            )}
             onClick={() => switchFont(font.key)}
           >
-            <div className={cn(
-              font.key === fontFamily && 'border-1',
-              " border-gray-200 w-full h-full flex items-center justify-center rounded-sm")}>
+            <div
+              className={cn(
+                font.key === fontFamily && "border-1",
+                "flex h-full w-full items-center justify-center rounded-sm border-gray-200",
+              )}
+            >
               <span className="select-none">Aa</span>
             </div>
           </div>
-          <span className={cn(
-            idx%4 === 0 && ' !left-0',
-            idx%4 === 1 && ' !left-1/2',
-            idx%4 === 3 && ' !right-1/2',
-            idx%4 === 4 && ' !right-0',
-            "absolute whitespace-nowrap z-100 hidden group-hover:block text-xs bg-gray-700 text-white  rounded py-1 px-2 -mt-10 bottom-0 transform translate-y-7")}>
+          <span
+            className={cn(
+              idx % 4 === 0 && "!left-0",
+              idx % 4 === 1 && "!left-1/2",
+              idx % 4 === 3 && "!right-1/2",
+              idx % 4 === 4 && "!right-0",
+              "absolute bottom-0 z-100 -mt-10 hidden translate-y-7 transform rounded bg-gray-700 px-2 py-1 text-xs whitespace-nowrap text-white group-hover:block",
+            )}
+          >
             {font.value}
           </span>
         </div>
-        
       ))}
     </div>
   )
@@ -168,11 +176,17 @@ export const CustomizerDrawer = () => {
         <div
           key={idx}
           onClick={() => switchTheme(p.key)}
-          className={cn(themeMode === p.key && "!border-gray-500" ,"cursor-pointer h-10 flex items-center  justify-center  rounded-md border !p-[1.5px] border-gray-300 hover:bg-gray-50")}
+          className={cn(
+            themeMode === p.key && "!border-gray-500",
+            "flex h-10 cursor-pointer items-center justify-center rounded-md border border-gray-300 !p-[1.5px] hover:bg-gray-50",
+          )}
         >
-          <div className={cn(
-            p.key === themeMode && 'border-1',
-            "flex items-center gap-2  w-full h-full justify-center border-gray-200 rounded-sm")}>
+          <div
+            className={cn(
+              p.key === themeMode && "border-1",
+              "flex h-full w-full items-center justify-center gap-2 rounded-sm border-gray-200",
+            )}
+          >
             {p.colors.map((c, i) => (
               <span
                 key={i}
@@ -181,7 +195,6 @@ export const CustomizerDrawer = () => {
               />
             ))}
           </div>
-          
         </div>
       ))}
     </div>
@@ -189,24 +202,27 @@ export const CustomizerDrawer = () => {
 
   return (
     <>
-    <div className={cn("flex flex-col gap-3 fixed top-1/2 right-0 z-40 -translate-y-1/2 duration-300", isOpen && "-translate-x-58  z-41")}>
       <div
-        className="!bg-primary relative rounded-l-md px-3 py-3 text-white shadow-lg cursor-pointer flex items-center gap-4"
+        className={cn(
+          "fixed top-1/2 right-0 z-40 flex -translate-y-1/2 flex-col gap-3 duration-300",
+          isOpen && "z-41 -translate-x-58",
+        )}
       >
-        <img src='/svg/cart.svg' width={24}/>
-        <p className="text-white text-start">Buy now</p>
-      </div>
+        <div className="!bg-primary relative flex cursor-pointer items-center gap-4 rounded-l-md px-3 py-3 text-white shadow-lg">
+          <img src="/svg/cart.svg" width={24} />
+          <p className="text-start text-white">Buy now</p>
+        </div>
 
-      <div
-        onClick={open}
-        className={"!bg-white  rounded-l-md px-3 py-3 text-black hover:text-primary  shadow-lg cursor-pointer flex items-center gap-4"}
-      >
-        <Customize className="!w-5 !h-5"/>
-        <p className=" text-start">Customize</p>
+        <div
+          onClick={open}
+          className={
+            "hover:text-primary flex cursor-pointer items-center gap-4 rounded-l-md !bg-white px-3 py-3 text-black shadow-lg"
+          }
+        >
+          <Customize className="!h-5 !w-5" />
+          <p className="text-start">Customize</p>
+        </div>
       </div>
-
-    </div>
-      
 
       {isOpen && (
         <div onClick={close} className="fixed inset-0 z-40 bg-black/40" />
@@ -237,7 +253,7 @@ export const CustomizerDrawer = () => {
           <button className="!bg-primary h-12 w-full rounded-md font-semibold text-white shadow hover:opacity-90">
             Buy Now
           </button>
-          <button className="hover:!bg-primary mt-3 flex h-12 w-full items-center justify-center rounded-md !border-1 text-primary !border-primary text-gray-700 hover:bg-gray-50 hover:text-white">
+          <button className="hover:!bg-primary text-primary !border-primary mt-3 flex h-12 w-full items-center justify-center rounded-md !border-1 text-gray-700 hover:bg-gray-50 hover:text-white">
             Learn how to use this template
           </button>
         </div>
