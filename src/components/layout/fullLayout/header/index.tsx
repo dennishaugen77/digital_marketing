@@ -75,8 +75,8 @@ export const Header = () => {
                   >
                     <p
                       className={cn(
-                        location.pathname.split("/").includes("blog") &&
-                          "text-black",
+                        location.pathname.split("/").includes("blog") && "text-black", 
+                          "font-secondary"
                       )}
                     >
                       {item.name}
@@ -88,7 +88,7 @@ export const Header = () => {
                             return (
                               <p
                                 key={elIndex}
-                                className="hover:text-primary cursor-pointer py-3 pr-7 pl-4 text-start text-black"
+                                className="hover:text-primary cursor-pointer py-3 pr-7 pl-4 text-start text-black font-secondary"
                                 onClick={(e: React.MouseEvent<HTMLElement>) =>
                                   link(el.link, e)
                                 }
@@ -113,7 +113,7 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-3">
           <SearchBar />
-          <div className="bg-primary cxl:!block hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black">
+          <div className="bg-primary cxl:!block hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black font-secondary">
             Get a Free Quote
           </div>
 
@@ -126,14 +126,14 @@ export const Header = () => {
         </div>
         <div
           className={cn(
-            "absolute top-22 left-0 w-full bg-white",
+            "absolute top-22 left-0 w-full bg-white", 
             openList ? "block" : "hidden",
           )}
         >
           {navigations.map((el, index) => {
             return (
               <div key={index} onClick={() => setList(false)}>
-                <p className="hover:text-primary flex cursor-pointer justify-between px-10 py-2 text-start text-xl">
+                <p className="hover:text-primary flex cursor-pointer justify-between px-10 py-2 text-start text-xl font-secondary">
                   {el.name}
                   {el.type === "dropdown" && (
                     <img src={"/svg/down-arrow-black.svg"} width={20} />

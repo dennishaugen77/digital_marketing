@@ -91,13 +91,13 @@ export const Hero = () => {
       <div className="relative my-auto flex">
         <div className="max-width mx-auto w-full">
           <div className="clg:mr-[25%] xl:mr-[50%]">
-            <p className="clg:text-start font-semibold text-white uppercase">
+            <p className="clg:text-start font-semibold text-white uppercase font-primary">
               {selectedTab.suffix}
             </p>
-            <p className="clg:text-start clg:leading-20 text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
+            <p className="clg:text-start clg:leading-20 text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28 font-primary font-primary">
               {selectedTab.title}
             </p>
-            <p className="cxs:!text-2xl clg:text-start mt-5 text-lg font-semibold text-white">
+            <p className="cxs:!text-2xl clg:text-start mt-5 text-lg font-semibold text-white font-secondary font-secondary">
               {selectedTab.detail}
             </p>
           </div>

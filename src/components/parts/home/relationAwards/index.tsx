@@ -3,7 +3,7 @@ import { cn } from "@/utils/cn"
 export const RelationAwards = () => {
   return (
     <div className="mx-auto flex w-full max-w-[1200px] flex-col px-10 py-24">
-      <p className="text-primary font-semibold uppercase">Relation & Awards</p>
+      <p className="text-primary font-semibold uppercase font-primary">Relation & Awards</p>
 
       <div className="mt-11 flex flex-col gap-8">
         <div className="grid grid-cols-1 items-center justify-center md:flex md:gap-8">

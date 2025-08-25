@@ -17,9 +17,9 @@ export const Hero = () => {
           <div className="max-width mx-auto w-full">
             <div className="clg:mr-[25%] xl:mr-[50%]">
               <p className="clg:text-start clg:leading-20 text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28 font-primary">
-                Contact
+                About 
               </p>
-              <p className="cxs:!text-2xl clg:text-start mt-5 text-lg font-semibold text-white font-primary">
+              <p className="cxs:!text-2xl clg:text-start mt-5 text-lg font-semibold text-white font-secondary">
                 Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.
               </p>
             </div>

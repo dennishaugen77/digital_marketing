@@ -1,4 +1,4 @@
-import { Hero } from "../contact/hero"
+import { Hero } from "./hero"
 import { Specialist } from "@/components/parts/about/SpecialList"
 import { solutions } from "../home/dummy"
 import { reviews } from "@/components/parts/home/reviews/dummy"
@@ -21,8 +21,8 @@ export const About = () => {
                     <img src="/svg/google.svg" width={40}></img>
                 </div>
                 <div className="flex flex-col items-center md:ml-3">
-                    <p className="text-start text-3xl font-bold md:text-6xl">4.8</p>
-                    <p className="font-semibold">200+ Reviews</p>
+                    <p className="text-start text-3xl font-bold md:text-6xl font-secondary">4.8</p>
+                    <p className="font-semibold font-secondary">200+ Reviews</p>
                 </div>
                 </div>
                 <div className="flex flex-col items-center md:flex-row">
@@ -30,8 +30,8 @@ export const About = () => {
                     <img src="/svg/facebook.svg" width={30} className="mt-2"></img>
                 </div>
                 <div className="flex flex-col items-center md:ml-3">
-                    <p className="text-start text-3xl font-bold md:text-6xl">4.6</p>
-                    <p className="font-semibold">400+ Reviews</p>
+                    <p className="text-start text-3xl font-bold md:text-6xl font-secondary">4.6</p>
+                    <p className="font-semibold font-secondary">400+ Reviews</p>
                 </div>
                 </div>
                 <div className="flex flex-col items-center md:flex-row">
@@ -39,8 +39,8 @@ export const About = () => {
                     <img src="/svg/map.svg" width={30} className="mt-2"></img>
                 </div>
                 <div className="flex flex-col items-center md:ml-3">
-                    <p className="text-start text-3xl font-bold md:text-6xl">4.8</p>
-                    <p className="font-semibold">100+ Reviews</p>
+                    <p className="text-start text-3xl font-bold md:text-6xl font-secondary">4.8</p>
+                    <p className="font-semibold font-secondary">100+ Reviews</p>
                 </div>
                 </div>
                 <div className="flex flex-col items-center md:flex-row">
@@ -48,8 +48,8 @@ export const About = () => {
                     <img src="/svg/star.svg" width={25} className="mt-2"></img>
                 </div>
                 <div className="flex flex-col items-center md:ml-3">
-                    <p className="text-start text-3xl font-bold md:text-6xl">4.7</p>
-                    <p className="font-semibold">200+ Reviews</p>
+                    <p className="text-start text-3xl font-bold md:text-6xl font-secondary">4.7</p>
+                    <p className="font-semibold font-secondary">200+ Reviews</p>
                 </div>
                 </div>
             </div>
@@ -57,21 +57,20 @@ export const About = () => {
             <div className="bg-background flex flex-col px-10 pt-24 pb-16">
                 <div className="mx-auto flex w-full max-w-[1200px] flex-col md:flex-row">
                     <div className="w-1/2 flex flex-col">
-                        <p className="text-primary-light mt-2 text-start font-semibold uppercase mb-4">What we do</p>
-                        <p className="lg:text-title mb-10 text-start text-4xl leading-17 font-semibold text-black">
+                        <p className="text-primary-light mt-2 text-start font-semibold uppercase mb-4 font-primary">What we do</p>
+                        <p className="lg:text-title mb-10 text-start text-4xl leading-17 font-semibold text-black font-primary">
                         Full-service Internet Marketing Solutions
                         </p>
                     </div>
                     
                     <div className="flex-1">
                     <div className="flex flex-col border-b-2 border-white">
-                        
-                        <p className="text-global-color2 mb-10 pr-10 text-start">
-                        Consequat enim mollis mauris vulputate phasellus neque, eros
-                        turpis et eu adipiscing id tempor, nascetur elit vitae molestie
-                        pulvinar viverra ut eu lectus mi velit cras integer tristique
-                        aliquam proin porta tellus elit neque mi velit sed pharetra morbi
-                        proin.
+                        <p className="text-global-color2 mb-10 pr-10 text-start font-secondary">
+                            Consequat enim mollis mauris vulputate phasellus neque, eros
+                            turpis et eu adipiscing id tempor, nascetur elit vitae molestie
+                            pulvinar viverra ut eu lectus mi velit cras integer tristique
+                            aliquam proin porta tellus elit neque mi velit sed pharetra morbi
+                            proin.
                         </p>
                     </div>
                     <div className="mt-10 grid w-full grid-cols-3 gap-7">
@@ -79,10 +78,10 @@ export const About = () => {
                             return (
                                 <div key={index} className="flex flex-col">
                                 <div className="mx-auto">{el.icon}</div>
-                                <p className="mt-3 text-start text-2xl font-semibold text-black capitalize">
+                                <p className="mt-3 text-start text-2xl font-semibold text-black capitalize font-primary">
                                     {el.title}
                                 </p>
-                                <p className="text-global-color2 mt-3 text-start">
+                                <p className="text-global-color2 mt-3 text-start font-secondary">
                                     {el.content}
                                 </p>
                                 </div>
@@ -103,10 +102,10 @@ export const About = () => {
                                             return <Starfull className="text-primary"/>
                                         })}
                                     </div>
-                                    <p className="my-5 text-start text-global-color3">{el.review}</p>
+                                    <p className="my-5 text-start text-global-color3 font-secondary">{el.review}</p>
                                     <div className="flex items-center gap-2">
                                         <img src={el.avatar} width={40} className="rounded-full"/>
-                                        <p className="text-start text-global-color3 uppercase">{el.name}</p>
+                                        <p className="text-start text-global-color3 uppercase font-secondary">{el.name}</p>
                                     </div>
                                 </div>
                             )
