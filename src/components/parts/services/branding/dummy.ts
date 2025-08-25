@@ -24,24 +24,24 @@ export const works = [
     title: "NeatBuds",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    img: "/src/assets/images/digital-marketing-agency-work-2.jpg",
+    img: "/images/digital-marketing-agency-work-2.jpg",
   },
   {
     title: "Glang Smartwatch",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    img: "/src/assets/images/digital-marketing-agency-work-1.jpg",
+    img: "/images/digital-marketing-agency-work-1.jpg",
   },
   {
     title: "Roogitec",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    img: "/src/assets/images/digital-marketing-agency-work-4.jpg",
+    img: "/images/digital-marketing-agency-work-4.jpg",
   },
   {
     title: "Nyez Water",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    img: "/src/assets/images/digital-marketing-agency-work-3.jpg",
+    img: "/images/digital-marketing-agency-work-3.jpg",
   },
 ]

@@ -1,4 +1,4 @@
-import { FooterLogo } from "@/assets/svg/FooterLogo"
+import { FooterLogo } from "@/assets/icons/FooterLogo"
 
 export const Footer = () => {
   return (

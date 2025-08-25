@@ -12,7 +12,7 @@ export const Home = () => {
       <WhatWeDo />
 
       <div>
-        <img src="/src/assets/images/digital-marketing-agency-about-us-full-width-img.jpg"></img>
+        <img src="/images/digital-marketing-agency-about-us-full-width-img.jpg"></img>
       </div>
 
       <OurServices />

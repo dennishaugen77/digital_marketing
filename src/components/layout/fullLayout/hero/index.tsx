@@ -2,7 +2,7 @@ import rightArror from "@/assets/icons/svg/right-arrow.svg"
 
 export const Hero = () => {
   return (
-    <div className="relative flex h-lvh w-full flex-col bg-[url(./assets/images/digital-marketing-agency-hero-img-bg.jpg)] bg-cover bg-center">
+    <div className="relative flex h-lvh w-full flex-col bg-[url(/images/digital-marketing-agency-hero-img-bg.jpg)] bg-cover bg-center">
       <div className="bg-global-color1/70 absolute h-full w-full"></div>
       <div className="relative my-auto flex px-10">
         <div className="mx-auto max-w-7xl">

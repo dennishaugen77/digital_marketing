@@ -18,7 +18,7 @@ const heroDetails: Record<string, HeroDetail> = {
     title: "Services",
     detail:
       "Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.",
-    img: "/src/assets/images/digital-marketing-agency-hero-img-bg-overlay.svg",
+    img: "/images/digital-marketing-agency-hero-img-bg-overlay.svg",
     backgroundStyle: "services",
   },
   branding: {
@@ -27,7 +27,7 @@ const heroDetails: Record<string, HeroDetail> = {
     title: "Branding",
     detail:
       "Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.",
-    img: "/src/assets/images/digital-marketing-agency-branding-header-bg-img.jpg",
+    img: "/images/digital-marketing-agency-branding-header-bg-img.jpg",
     backgroundStyle: "default",
   },
   "digital-marketing": {
@@ -36,7 +36,7 @@ const heroDetails: Record<string, HeroDetail> = {
     title: "Digital Marketing",
     detail:
       "Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.",
-    img: "/src/assets/images/digital-marketing-agency-marketing-header-bg-img.jpg",
+    img: "/images/digital-marketing-agency-marketing-header-bg-img.jpg",
     backgroundStyle: "default",
   },
   "seo-service": {
@@ -45,7 +45,7 @@ const heroDetails: Record<string, HeroDetail> = {
     title: "Seo services",
     detail:
       "Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.",
-    img: "/src/assets/images/digital-marketing-agency-social-media-header-bg-img.jpg",
+    img: "/images/digital-marketing-agency-social-media-header-bg-img.jpg",
     backgroundStyle: "default",
   },
   "social-media": {
@@ -54,7 +54,7 @@ const heroDetails: Record<string, HeroDetail> = {
     title: "Social Media",
     detail:
       "Sollicitudin eros nulla mus donec quisque convallis integer condimentum volutpat.",
-    img: "./assets/images/digital-marketing-agency-hero-img-bg-overlay.svg",
+    img: "/images/digital-marketing-agency-hero-img-bg-overlay.svg",
     backgroundStyle: "default",
   },
 }

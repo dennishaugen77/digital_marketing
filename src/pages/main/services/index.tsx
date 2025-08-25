@@ -6,8 +6,8 @@ export const Services = () => {
   return (
     <div className="flex flex-col">
       <Hero />
-      <div className="bg-background relative flex flex-col bg-[url(./assets/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 py-26 transition-all duration-300">
-        <div className="absolute right-0 h-full w-full bg-[url(./assets/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
+      <div className="bg-background relative flex flex-col bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 py-26 transition-all duration-300">
+        <div className="absolute right-0 h-full w-full bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
         <div className="relative mx-auto flex w-full max-w-[1200px] items-center">
           <div className="flex w-1/2 flex-col pr-16">
             <p className="text-primary text-start font-semibold uppercase">
