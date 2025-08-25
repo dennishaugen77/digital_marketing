@@ -47,7 +47,6 @@ export const Header = () => {
               ? <FooterLogo style={{ color: "var(--color-primary)", margin: "0 auto" }}/> 
               : <img src={logo} alt="logo" />
             }
-            
           </div>
           <div className="cxl:!flex hidden h-20">
             {navigations.map((item, index) => {

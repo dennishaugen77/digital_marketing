@@ -3,17 +3,9 @@ import { Home } from "@/components/parts/home"
 import { Services } from "@/pages/main/services"
 import { Branding } from "./services/branding"
 import { ROUTES } from "@/constants/routes"
-import { Navigate, Route, Routes, useParams } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
+import { BlogDetail } from "./blogs/BlogDetail"
 import { Blogs } from "./blogs"
-
-// Reusable Service Page Component
-const ServicePage = () => {
-  const { serviceType } = useParams()
-
-  // You can add logic here to render different content based on serviceType
-  // For now, we'll use the Branding component as a template
-  return <Branding />
-}
 
 export const MainRouting = () => {
   return (
@@ -27,9 +19,10 @@ export const MainRouting = () => {
         <Route path={ROUTES.MAIN.SERVICES.INDEX} element={<Services />} />
 
         {/* Dynamic service route - handles all service types */}
-        <Route path="/services/:serviceType" element={<ServicePage />} />
+        <Route path="/services/:serviceType" element={<Branding />} />
 
-        <Route path={ROUTES.MAIN.Blogs.index} element={<Blogs/>} />
+        <Route path={ROUTES.MAIN.BLOGS.INDEX} element={<Blogs/>} />
+        <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail/>}/>
       </Routes>
     </FullLayout>
   )

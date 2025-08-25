@@ -1,18 +1,25 @@
 @import "tailwindcss";
 
 @theme {
+  --font-primary: 'Sans';
   --color-primary: rgb(44, 44, 201);
   --color-primary-light: rgb(53, 53, 222);
   --color-background: #f4f4f5;
   --color-global-color1: #121240;
   --color-global-color2: #76767f;
+  --color-glbal-color3: #26262c;
 
   --breakpoint-cxl: 1110px;
   --breakpoint-clg: 750px;
   --breakpoint-cxs: 590px;
+
+  --text-title1: 1.625rem;
+  --text-title2: 1.375rem;
+  --text-title3: 1.2rem;
 }
 
 @layer base {
+
   .green {
     --color-primary: rgb(55, 146, 55);
     --color-primary-light: rgb(84, 180, 53);
