@@ -42,14 +42,14 @@ export const RelationAwards = () => {
 }
 
 const logoListTop = [
-  "/src/assets/images/logo1.svg",
-  "/src/assets/images/logo2.svg",
-  "/src/assets/images/logo3.svg",
-  "/src/assets/images/logo4.svg",
+  "/images/logo1.svg",
+  "/images/logo2.svg",
+  "/images/logo3.svg",
+  "/images/logo4.svg",
 ]
 
 const logoListBottom = [
-  "/src/assets/images/logo5.svg",
-  "/src/assets/images/logo6.svg",
-  "/src/assets/images/logo7.svg",
+  "/images/logo5.svg",
+  "/images/logo6.svg",
+  "/images/logo7.svg",
 ]

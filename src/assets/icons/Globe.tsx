@@ -1,5 +1,5 @@
 import React from "react"
-import { IconProps } from "../svg/FooterLogo"
+import { IconProps } from "./FooterLogo"
 
 export const Globe: React.FC<IconProps> = ({ color, className, style }) => (
   <svg

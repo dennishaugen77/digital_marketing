@@ -1,6 +1,6 @@
 import { SearchBar } from "@/components/atoms/searchBar"
 import logo from "@/assets/svg/logo.svg"
-import { FooterLogo } from "@/assets/svg/FooterLogo"
+import { FooterLogo } from "@/assets/icons/FooterLogo"
 import downArrowWhite from "@/assets/icons/svg/down-arrow-white.svg"
 import downArrowBlack from "@/assets/icons/svg/down-arrow-black.svg"
 import { navigations } from "./dummy"
