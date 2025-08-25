@@ -11,8 +11,8 @@ export const Home = () => {
 
       <WhatWeDo />
 
-      <div>
-        <img src="/images/digital-marketing-agency-about-us-full-width-img.jpg"></img>
+      <div className="flex bg-background">
+        <img src="/images/digital-marketing-agency-about-us-full-width-img.jpg" className="mx-auto"></img>
       </div>
 
       <OurServices />
