@@ -1,3 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: 'Sans';
+  --color-primary: rgb(44, 44, 201);
+  --color-primary-light: rgb(53, 53, 222);
+  --color-background: #f4f4f5;
+  --color-global-color1: #121240;
+  --color-global-color2: #76767f;
+  --color-glbal-color3: #26262c;
+
+  --breakpoint-cxl: 1110px;
+  --breakpoint-clg: 750px;
+  --breakpoint-cxs: 590px;
+
+  --text-title1: 1.625rem;
+  --text-title2: 1.375rem;
+  --text-title3: 1.2rem;
+}
+
+@layer base {
+
+  .green {
+    --color-primary: rgb(55, 146, 55);
+    --color-primary-light: rgb(84, 180, 53);
+  }
+  .red {
+    --color-primary: rgb(204, 25, 57);
+    --color-primary-light: rgb(221, 24, 59);
+  }
+  .choco {
+    --color-primary: rgb(233, 140, 0);
+    --color-primary-light: rgb(253, 152, 0);
+  }
+
+  .peru {
+    --color-primary: rgb(208, 154, 64);
+    --color-primary-light: rgb(220, 165, 74);
+  }
+  .seagreen {
+    --color--primary: rgb(23, 142, 121);
+    --color--primary-light: rgb(27, 156, 133);
+  }
+  .orangered {
+    --color-primary: rgb(241, 88, 8);
+    --color-primary-light: rgb(255, 98, 16);
+  }
+  .pink {
+    --color-primary: rgb(234, 85, 157);
+    --color-primary-light: rgb(251, 95, 171);
+  }
+  .indigo {
+    --color-primary: rgb(85, 17, 248);
+    --color-primary-light: rgb(101, 40, 247);
+  }
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,8 +83,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -52,6 +110,28 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.text-title {
+  font-size: 3.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 @media (prefers-color-scheme: light) {
