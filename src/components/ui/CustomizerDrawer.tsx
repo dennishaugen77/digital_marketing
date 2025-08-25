@@ -93,7 +93,7 @@ export const CustomizerDrawer = () => {
         colors: ["rgb(23, 142, 121)", "rgb(27, 156, 133)"],
       },
       {
-        key: "orangred",
+        key: "orangered",
         colors: ["rgb(241, 88, 8)", "rgb(255, 98, 16)"],
       },
       {
