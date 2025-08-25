@@ -22,7 +22,7 @@ export const Hero = () => {
               </div>
               <div className="flex items-baseline gap-1 py-3 pl-5 text-white">
                 <p className="cursor-pointer hover:text-white/75">Learn More</p>
-                <img src={'/icons/svg/right-arrow.svg'} width={12}></img>
+                <img src={'/svg/right-arrow.svg'} width={12}></img>
               </div>
             </div>
           </div>
