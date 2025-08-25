@@ -7,6 +7,7 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { BlogDetail } from "./blogs/BlogDetail"
 import { About } from "./about"
 import { Blogs } from "./blogs"
+import { Contact } from "./contact"
 
 export const MainRouting = () => {
   return (
@@ -26,6 +27,8 @@ export const MainRouting = () => {
         <Route path={ROUTES.MAIN.BLOGS.PARAMS} element={<BlogDetail />} />
 
         <Route path={ROUTES.MAIN.ABOUT.INDEX} element={<About/>}/>
+
+        <Route path={ROUTES.MAIN.CONTACT.INDEX} element={<Contact/>}/>
       </Routes>
     </FullLayout>
   )
