@@ -15,5 +15,8 @@ export const ROUTES = {
       INDEX: "/blog",
       PARAMS: "/blog/:param",
     },
+    ABOUT: {
+      INDEX: "/about",
+    }
   },
 }
