@@ -13,21 +13,21 @@ export const BlogDetail = () => {
 
   return (
     <div className="bg-background flex flex-col gap-6 py-16">
-      <div className="max-width mx-auto w-full bg-white px-[6.67rem] py-[5.34rem]">
+      <div className="max-width mx-auto w-full bg-white lg:px-[6.67rem]  lg:py-[5.34rem] p-10">
         <img src={currentDetail?.img}></img>
         <p className="text-title1 font-primary text-start">
           {currentDetail?.title}
         </p>
         <div className="text-title3 mb-5 flex gap-1">
-          <p className="hover:text-primary font-secondary cursor-pointer">
+          <p className="hover:text-primary font-secondary cursor-pointer cxs:!text-base !text-sm">
             Leave a comment
           </p>
-          <p className="">/</p>
-          <p className="hover:text-primary font-primary cursor-pointer">
+          <p className=" cxs:!text-base !text-sm">/</p>
+          <p className="hover:text-primary font-primary cursor-pointer cxs:!text-base !text-sm">
             Createive
           </p>
-          <span>/</span>
-          <p className="hover:text-primary font-primary cursor-pointer">
+          <p className=" cxs:!text-base !text-sm">/</p>
+          <p className="hover:text-primary font-primary cursor-pointer cxs:!text-base !text-sm">
             akvarh
           </p>
         </div>
@@ -49,17 +49,17 @@ export const BlogDetail = () => {
           {currentDetail?.describe5}
         </p>
       </div>
-      <div className="max-width mx-auto flex w-full justify-between">
-        <p className="font-primary flex items-center gap-0.5">
-          <img src="/src/assets/icons/svg/left-arrow-black.svg" width={13} />
+      <div className="max-width mx-auto flex w-full justify-between px-15">
+        <p className="font-primary flex items-center gap-0.5 cursor-pointer">
+          <img src="/svg/left-arrow-black.svg" width={13} />
           Previous Post{" "}
         </p>
-        <p className="font-primary flex items-center gap-0.5">
+        <p className="font-primary flex items-center gap-0.5 cursor-pointer">
           Next Post
-          <img src="/src/assets/icons/svg/right-arrow-black.svg" width={13} />
+          <img src="/svg/right-arrow-black.svg" width={13} />
         </p>
       </div>
-      <div className="max-width mx-auto flex w-full flex-col justify-between bg-white px-[6.67rem] py-[5.34rem]">
+      <div className="max-width mx-auto flex w-full flex-col justify-between bg-white lg:px-[6.67rem] lg:py-[5.34rem] p-10">
         <p className="text-title1 font-primary mb-3 text-start">
           Leave a Comment
         </p>
@@ -70,7 +70,7 @@ export const BlogDetail = () => {
           className="mb-5 border-1 border-gray-200 bg-gray-100 p-4 focus:outline-1 focus:outline-dotted"
           placeholder="Type here.."
         />
-        <div className="mb-5 flex justify-between gap-8">
+        <div className="mb-5 flex lg:flex-row flex-col justify-between gap-8">
           <input
             placeholder="Name*"
             className="font-secondary w-full border-1 border-gray-200 bg-gray-100 p-4 focus:outline-1 focus:outline-dotted"
