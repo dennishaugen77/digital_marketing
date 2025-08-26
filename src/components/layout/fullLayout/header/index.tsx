@@ -6,6 +6,7 @@ import { useState, useEffect, useMemo } from "react"
 import { ListIcon } from "@/assets/icons/ListIcon"
 import { cn } from "@/utils/cn"
 import { useLocation, useNavigate } from "react-router"
+import { LoginDialog } from "@/components/parts/auth/login/index"
 
 export const Header = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -13,6 +14,7 @@ export const Header = () => {
   )
   const [openList, setList] = useState<boolean>(false)
   const [openResponsiveList, setResponsiveList] = useState<boolean>(false)
+  const [isLoginDialogOpen, setOpenLoginDialog] = useState<boolean>(false)
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -123,7 +125,10 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-3">
           <SearchBar />
-          <div className="bg-primary cxl:!block font-secondary hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black">
+          <div 
+            className="bg-primary cxl:!block font-secondary hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+            onClick={() => setOpenLoginDialog(true)}
+          >
             Get a Free Quote
           </div>
 
@@ -195,6 +200,7 @@ export const Header = () => {
           })}
         </div>
       </div>
+      <LoginDialog isOpen={isLoginDialogOpen} onClose={() => setOpenLoginDialog(false)}/>
     </div>
   )
 }
