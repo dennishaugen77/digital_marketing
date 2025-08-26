@@ -136,7 +136,7 @@ export const CustomizerDrawer = () => {
   const FontSamples = () => (
     <div className="grid grid-cols-4 gap-3">
       {fonts.map((font, idx) => (
-        <div className="group relative inline-block">
+        <div className="group relative inline-block" key={idx}>
           <div
             key={idx}
             className={cn(

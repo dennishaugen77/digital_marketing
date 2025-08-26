@@ -8,8 +8,8 @@ export const Services = () => {
       <Hero />
       <div className="bg-background relative flex flex-col bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 py-26 transition-all duration-300">
         <div className="absolute right-0 h-full w-full bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
-        <div className="relative mx-auto flex csm:!flex-row flex-col w-full max-w-[1200px] items-center">
-          <div className="flex csm:!w-1/2 flex-col csm:!pr-16">
+        <div className="csm:!flex-row relative mx-auto flex w-full max-w-[1200px] flex-col items-center">
+          <div className="csm:!w-1/2 csm:!pr-16 flex flex-col">
             <p className="text-primary font-primary text-start font-semibold uppercase">
               Our services
             </p>
@@ -46,16 +46,16 @@ export const Services = () => {
               <div
                 key={index}
                 className={cn(
-                  "flex items-center csm:!flex-row flex-col-reverse",
+                  "csm:!flex-row flex flex-col-reverse items-center",
                   index % 2 && "csm:!flex-row-reverse",
                   index !== 3 && "csm:!mb-20",
                 )}
               >
                 <div className="csm:!w-1/2 csm:!pr-10 csm:!pl-12">
-                  <p className="font-primary text-3xl font-semibold csm:!mt-0 mt-5 csm:!text-center text-start">
+                  <p className="font-primary csm:!mt-0 csm:!text-center mt-5 text-start text-3xl font-semibold">
                     {el.title}
                   </p>
-                  <p className="text-global-color2 font-secondary csm:!my-7 mt-2 mb-5 csm:!text-center text-start">
+                  <p className="text-global-color2 font-secondary csm:!my-7 csm:!text-center mt-2 mb-5 text-start">
                     {el.content}
                   </p>
                 </div>

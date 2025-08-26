@@ -16,15 +16,15 @@ export const Blogs = () => {
                   {el.title}
                 </p>
                 <div className="text-title3 mb-5 flex flex-wrap gap-1">
-                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm whitespace-nowrap">
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm whitespace-nowrap">
                     Leave a comment
                   </p>
-                  <p className=" csx:!text-base text-sm">/</p>
-                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm">
+                  <p className="csx:!text-base text-sm">/</p>
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm">
                     Creative
                   </p>
-                  <p className=" csx:!text-base text-sm">/</p>
-                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm">
+                  <p className="csx:!text-base text-sm">/</p>
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm">
                     akvarh
                   </p>
                 </div>
