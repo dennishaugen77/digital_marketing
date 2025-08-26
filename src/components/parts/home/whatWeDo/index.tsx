@@ -20,7 +20,7 @@ export const WhatWeDo = () => {
               proin.
             </p>
           </div>
-          <div className="mt-10 grid w-full grid-cols-3 gap-7">
+          <div className="mt-10 grid w-full cxs:!grid-cols-3 grid-cols-1 gap-7">
             {solutions.map((el, index) => {
               return (
                 <div key={index} className="flex flex-col">
