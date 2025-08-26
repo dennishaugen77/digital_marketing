@@ -42,6 +42,6 @@ export const navigations = [
   {
     name: "Contract",
     type: "link",
-    link: "/contract",
+    link: "/contact",
   },
 ]

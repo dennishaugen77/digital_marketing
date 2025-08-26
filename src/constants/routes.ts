@@ -17,6 +17,9 @@ export const ROUTES = {
     },
     ABOUT: {
       INDEX: "/about",
-    }
+    },
+    CONTACT: {
+      INDEX: "/contact",
+    },
   },
 }
