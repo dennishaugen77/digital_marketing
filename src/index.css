@@ -10,7 +10,8 @@
 
   --breakpoint-cxl: 1110px;
   --breakpoint-clg: 750px;
-  --breakpoint-cxs: 590px;
+  --breakpoint-csm: 590px;
+  --breakpoint-cxs: 465px;
 
   --text-title: 3.5rem;
   --text-title1: 1.625rem;
@@ -115,6 +116,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+p {
+  font-family: Poppins !important;
 }
 
 button {

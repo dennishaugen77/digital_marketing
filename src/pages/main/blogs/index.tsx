@@ -15,16 +15,16 @@ export const Blogs = () => {
                 <p className="text-global-color2 text-title1 font-primary text-start">
                   {el.title}
                 </p>
-                <div className="text-title3 mb-5 flex gap-1">
-                  <p className="hover:text-primary font-primary cursor-pointer">
+                <div className="text-title3 mb-5 flex flex-wrap gap-1">
+                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm whitespace-nowrap">
                     Leave a comment
                   </p>
-                  <p className="">/</p>
-                  <p className="hover:text-primary font-primary cursor-pointer">
+                  <p className=" csx:!text-base text-sm">/</p>
+                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm">
                     Creative
                   </p>
-                  <span>/</span>
-                  <p className="hover:text-primary font-primary cursor-pointer">
+                  <p className=" csx:!text-base text-sm">/</p>
+                  <p className="hover:text-primary font-primary cursor-pointer csx:!text-base text-sm">
                     akvarh
                   </p>
                 </div>
