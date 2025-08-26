@@ -66,7 +66,7 @@ export const About = () => {
       </div>
 
       <div className="bg-background flex flex-col divide-y-2 divide-white px-10 pt-24 pb-16">
-        <div className="mx-auto flex w-full max-w-[1200px] flex-col md:flex-row pb-20">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col pb-20 md:flex-row">
           <div className="flex flex-col md:w-1/2">
             <p className="text-primary-light font-primary mt-2 mb-4 text-start font-semibold uppercase">
               What we do
@@ -86,7 +86,7 @@ export const About = () => {
                 morbi proin.
               </p>
             </div>
-            <div className="mt-10 grid w-full csm:!grid-cols-3 grid-cols-1 gap-7">
+            <div className="csm:!grid-cols-3 mt-10 grid w-full grid-cols-1 gap-7">
               {solutions.map((el, index) => {
                 return (
                   <div key={index} className="flex flex-col">

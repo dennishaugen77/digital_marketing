@@ -153,7 +153,7 @@ export const Header = () => {
                 className="flex flex-col"
                 onClick={() => setList(false)}
               >
-                <p
+                <div
                   className={cn(
                     "hover:text-primary font-secondary flex cursor-pointer justify-between px-10 py-2 text-start text-xl",
                     openResponsiveList && index === 1 && "pb-0",
@@ -172,7 +172,7 @@ export const Header = () => {
                       <img src={"/svg/down-arrow-black.svg"} width={20} />
                     </div>
                   )}
-                </p>
+                </div>
                 {openResponsiveList &&
                   el.subList?.map((val, idx) => {
                     return (

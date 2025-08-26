@@ -4,19 +4,22 @@ import { postList } from "./dummy"
 
 export const BlogDetail = () => {
   const params = useParams()
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const currentDetail = useMemo<{
-    title: string;
-    preview: string;
-    img: string;
-    describe1: string;
-    describe2: string;
-    describe3: string;
-    describe4: string;
-    describe5: string;
-    link: string;
-  } | undefined>(() => {
+  const currentDetail = useMemo<
+    | {
+        title: string
+        preview: string
+        img: string
+        describe1: string
+        describe2: string
+        describe3: string
+        describe4: string
+        describe5: string
+        link: string
+      }
+    | undefined
+  >(() => {
     return postList.find(
       (el: any) => el.link.split("/").reverse()[0].slice(0) === params.param,
     )
@@ -26,7 +29,12 @@ export const BlogDetail = () => {
     if (!!currentDetail && postList.indexOf(currentDetail) === 2) {
       return (
         <div className="max-width mx-auto flex w-full justify-between px-15">
-          <p className="font-primary flex items-center gap-0.5 cursor-pointer" onClick={() => navigate(postList[postList.indexOf(currentDetail)-1].link)}>
+          <p
+            className="font-primary flex cursor-pointer items-center gap-0.5"
+            onClick={() =>
+              navigate(postList[postList.indexOf(currentDetail) - 1].link)
+            }
+          >
             <img src="/svg/left-arrow-black.svg" width={13} />
             Previous Post{" "}
           </p>
@@ -35,21 +43,35 @@ export const BlogDetail = () => {
     } else if (!!currentDetail && postList.indexOf(currentDetail) === 1) {
       return (
         <div className="max-width mx-auto flex w-full justify-between px-15">
-          <p className="font-primary flex items-center gap-0.5 cursor-pointer" onClick={() => navigate(postList[postList.indexOf(currentDetail)-1].link)}>
+          <p
+            className="font-primary flex cursor-pointer items-center gap-0.5"
+            onClick={() =>
+              navigate(postList[postList.indexOf(currentDetail) - 1].link)
+            }
+          >
             <img src="/svg/left-arrow-black.svg" width={13} />
             Previous Post{" "}
           </p>
-          <p className="font-primary flex items-center gap-0.5 cursor-pointer"  onClick={() => navigate(postList[postList.indexOf(currentDetail)+1].link)}>
+          <p
+            className="font-primary flex cursor-pointer items-center gap-0.5"
+            onClick={() =>
+              navigate(postList[postList.indexOf(currentDetail) + 1].link)
+            }
+          >
             Next Post
             <img src="/svg/right-arrow-black.svg" width={13} />
           </p>
         </div>
       )
-      
-    } else if (!!currentDetail){
+    } else if (!!currentDetail) {
       return (
         <div className="max-width mx-auto flex w-full justify-between px-15">
-          <p className="font-primary flex items-center gap-0.5 cursor-pointer ml-auto" onClick={() => navigate(postList[postList.indexOf(currentDetail)+1].link)}>
+          <p
+            className="font-primary ml-auto flex cursor-pointer items-center gap-0.5"
+            onClick={() =>
+              navigate(postList[postList.indexOf(currentDetail) + 1].link)
+            }
+          >
             Next Post
             <img src="/svg/right-arrow-black.svg" width={13} />
           </p>
@@ -58,24 +80,23 @@ export const BlogDetail = () => {
     }
   }
 
-
   return (
     <div className="bg-background flex flex-col gap-6 py-16">
-      <div className="max-width mx-auto w-full bg-white lg:px-[6.67rem]  lg:py-[5.34rem] p-10">
+      <div className="max-width mx-auto w-full bg-white p-10 lg:px-[6.67rem] lg:py-[5.34rem]">
         <img src={currentDetail?.img}></img>
         <p className="text-title1 font-primary text-start">
           {currentDetail?.title}
         </p>
         <div className="text-title3 mb-5 flex gap-1">
-          <p className="hover:text-primary font-secondary cursor-pointer cxs:!text-base !text-sm">
+          <p className="hover:text-primary font-secondary cxs:!text-base cursor-pointer !text-sm">
             Leave a comment
           </p>
-          <p className=" cxs:!text-base !text-sm">/</p>
-          <p className="hover:text-primary font-primary cursor-pointer cxs:!text-base !text-sm">
+          <p className="cxs:!text-base !text-sm">/</p>
+          <p className="hover:text-primary font-primary cxs:!text-base cursor-pointer !text-sm">
             Createive
           </p>
-          <p className=" cxs:!text-base !text-sm">/</p>
-          <p className="hover:text-primary font-primary cursor-pointer cxs:!text-base !text-sm">
+          <p className="cxs:!text-base !text-sm">/</p>
+          <p className="hover:text-primary font-primary cxs:!text-base cursor-pointer !text-sm">
             akvarh
           </p>
         </div>
@@ -97,8 +118,8 @@ export const BlogDetail = () => {
           {currentDetail?.describe5}
         </p>
       </div>
-      <DetailChangeAction/>
-      <div className="max-width mx-auto flex w-full flex-col justify-between bg-white lg:px-[6.67rem] lg:py-[5.34rem] p-10">
+      <DetailChangeAction />
+      <div className="max-width mx-auto flex w-full flex-col justify-between bg-white p-10 lg:px-[6.67rem] lg:py-[5.34rem]">
         <p className="text-title1 font-primary mb-3 text-start">
           Leave a Comment
         </p>
@@ -109,7 +130,7 @@ export const BlogDetail = () => {
           className="mb-5 border-1 border-gray-200 bg-gray-100 p-4 focus:outline-1 focus:outline-dotted"
           placeholder="Type here.."
         />
-        <div className="mb-5 flex lg:flex-row flex-col justify-between gap-8">
+        <div className="mb-5 flex flex-col justify-between gap-8 lg:flex-row">
           <input
             placeholder="Name*"
             className="font-secondary w-full border-1 border-gray-200 bg-gray-100 p-4 focus:outline-1 focus:outline-dotted"
