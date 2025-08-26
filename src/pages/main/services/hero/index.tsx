@@ -97,7 +97,7 @@ export const Hero = () => {
             <p className="clg:text-start clg:leading-20 font-primary font-primary text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
               {selectedTab.title}
             </p>
-            <p className="cxs:!text-2xl clg:text-start font-secondary font-secondary mt-5 text-lg font-semibold text-white">
+            <p className="csm:!text-2xl clg:text-start font-secondary font-secondary mt-5 text-lg font-semibold text-white">
               {selectedTab.detail}
             </p>
           </div>
