@@ -21,7 +21,7 @@ export const Blogs = () => {
                   </p>
                   <p className="">/</p>
                   <p className="hover:text-primary font-primary cursor-pointer">
-                    Createive
+                    Creative
                   </p>
                   <span>/</span>
                   <p className="hover:text-primary font-primary cursor-pointer">
@@ -53,6 +53,7 @@ export const Blogs = () => {
                   <p
                     key={index}
                     className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start font-light"
+                    onClick={() => navigate(el.link)}
                   >
                     {el.value}
                   </p>
@@ -70,6 +71,7 @@ export const Blogs = () => {
                   <p
                     key={index}
                     className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start leading-8 font-light"
+                    onClick={() => navigate(el.link)}
                   >
                     {el.value}
                   </p>

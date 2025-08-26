@@ -67,11 +67,14 @@ export const recentPosts = [
 export const category = [
   {
     value: "Creative",
+    link: "/blog/how-artist-can-nulla-vitae-turpis-vel",
   },
   {
     value: "Digital Marketing",
+    link: "/blog/what-do-aliquam-sed-fringilla",
   },
   {
     value: "Social Media",
+    link: "/blog/how-do-you-vulputate-nullam-mattis",
   },
 ]
