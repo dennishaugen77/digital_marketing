@@ -12,6 +12,7 @@ export const Header = () => {
     null,
   )
   const [openList, setList] = useState<boolean>(false)
+  const [openResponsiveList, setResponsiveList] = useState<boolean>(false)
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -31,6 +32,14 @@ export const Header = () => {
 
   const link = (link: string, e: React.MouseEvent<HTMLElement>) => {
     setOpenDropdownIndex(null)
+    navigate(link)
+    e.preventDefault()
+    e.stopPropagation()
+  }
+
+  const linkMobile = (link: string, e: React.MouseEvent) => {
+    setResponsiveList(false)
+    setList(false)    
     navigate(link)
     e.preventDefault()
     e.stopPropagation()
@@ -122,7 +131,7 @@ export const Header = () => {
             className="cxl:!hidden block cursor-pointer"
             onClick={() => setList(!openList)}
           >
-            <ListIcon />
+            <ListIcon className={cn(location.pathname.split("/").includes("blog") ? 'text-global-color3' : 'text-white')}/>
           </div>
         </div>
         <div
@@ -133,13 +142,29 @@ export const Header = () => {
         >
           {navigations.map((el, index) => {
             return (
-              <div key={index} onClick={() => setList(false)}>
-                <p className="hover:text-primary font-secondary flex cursor-pointer justify-between px-10 py-2 text-start text-xl">
+              <div key={index} className="flex flex-col" onClick={() => setList(false)}>
+                <p className={cn("hover:text-primary font-secondary flex cursor-pointer justify-between px-10 py-2 text-start text-xl", (openResponsiveList && index === 1) && "pb-0")} onClick={(e) => navigate(el.link)}>
                   {el.name}
                   {el.type === "dropdown" && (
-                    <img src={"/svg/down-arrow-black.svg"} width={20} />
+                    <div className="p-3 hover:border-1 border-dotted" onClick={(e: React.MouseEvent<HTMLElement>) => {
+                      setResponsiveList(!openResponsiveList)
+                      e.stopPropagation()
+                    }
+                    }>
+                      <img src={"/svg/down-arrow-black.svg"} width={20} />
+                    </div>
                   )}
                 </p>
+                {
+                 openResponsiveList && el.subList?.map((val, idx) => {
+                    return (
+                      <div key={idx} className="flex gap-2 px-13 py-2" onClick={(e: React.MouseEvent) => linkMobile(val.link, e)}>
+                        <img src="/svg/chevron-right.svg" width={20}/>
+                        <p className=" text-start hover:text-primary cursor-pointer">{ val.title }</p>
+                      </div>
+                    )
+                  })
+                }
               </div>
             )
           })}
