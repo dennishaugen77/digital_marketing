@@ -6,10 +6,10 @@ export const Approach = () => {
       <div className="max-width divide- mx-auto flex w-full flex-col divide-y-2 divide-white/30">
         <div className="flex flex-col">
           <p className="font-primary text-xl text-white">Our Approach</p>
-          <p className="text-title font-primary mt-2 font-medium text-white">
+          <p className="sm:text-title text-4xl font-primary mt-2 font-medium text-white">
             Insight. Creativity. Technology.
           </p>
-          <p className="font-secondary px-[24%] py-8 text-lg text-white">
+          <p className="font-secondary lg:!px-70 md:!px-40 csm:!px-20 px-10 py-8 text-lg text-white">
             Faucibus vestibulum mi adipiscing phasellus sagittis fringilla
             potenti volutpat quam elit fermentum, viverra faucibus ante
             fringilla.
