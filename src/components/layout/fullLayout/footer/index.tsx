@@ -52,8 +52,9 @@ export const Footer = () => {
             <div className="mx-auto max-w-300 md:max-w-50">
               <FooterLogo
                 style={{ color: "var(--color-primary)" }}
+                className="md:mx-0 mx-auto"
               />
-              <p className="text-global-color2 font-secondary text-center text-xl sm:text-start mt-2">
+              <p className="text-global-color2 font-secondary text-center text-xl sm:text-start">
                 Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
                 vitae cursus auctor laoreet fermentum.
               </p>
