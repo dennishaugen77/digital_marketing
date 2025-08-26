@@ -21,7 +21,7 @@ export const SearchBar = () => {
   }, [isSpread])
 
   return (
-    <div>
+    <div className="hidden sm:block">
       <div ref={containerRef} className="relative flex w-56 items-center">
         <input
           placeholder="Search"
