@@ -1,15 +1,63 @@
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import { useMemo } from "react"
 import { postList } from "./dummy"
 
 export const BlogDetail = () => {
   const params = useParams()
+  const navigate = useNavigate();
 
-  const currentDetail = useMemo(() => {
+  const currentDetail = useMemo<{
+    title: string;
+    preview: string;
+    img: string;
+    describe1: string;
+    describe2: string;
+    describe3: string;
+    describe4: string;
+    describe5: string;
+    link: string;
+  } | undefined>(() => {
     return postList.find(
       (el: any) => el.link.split("/").reverse()[0].slice(0) === params.param,
     )
   }, [params])
+
+  const DetailChangeAction = () => {
+    if (!!currentDetail && postList.indexOf(currentDetail) === 2) {
+      return (
+        <div className="max-width mx-auto flex w-full justify-between px-15">
+          <p className="font-primary flex items-center gap-0.5 cursor-pointer" onClick={() => navigate(postList[postList.indexOf(currentDetail)-1].link)}>
+            <img src="/svg/left-arrow-black.svg" width={13} />
+            Previous Post{" "}
+          </p>
+        </div>
+      )
+    } else if (!!currentDetail && postList.indexOf(currentDetail) === 1) {
+      return (
+        <div className="max-width mx-auto flex w-full justify-between px-15">
+          <p className="font-primary flex items-center gap-0.5 cursor-pointer" onClick={() => navigate(postList[postList.indexOf(currentDetail)-1].link)}>
+            <img src="/svg/left-arrow-black.svg" width={13} />
+            Previous Post{" "}
+          </p>
+          <p className="font-primary flex items-center gap-0.5 cursor-pointer"  onClick={() => navigate(postList[postList.indexOf(currentDetail)+1].link)}>
+            Next Post
+            <img src="/svg/right-arrow-black.svg" width={13} />
+          </p>
+        </div>
+      )
+      
+    } else if (!!currentDetail){
+      return (
+        <div className="max-width mx-auto flex w-full justify-between px-15">
+          <p className="font-primary flex items-center gap-0.5 cursor-pointer ml-auto" onClick={() => navigate(postList[postList.indexOf(currentDetail)+1].link)}>
+            Next Post
+            <img src="/svg/right-arrow-black.svg" width={13} />
+          </p>
+        </div>
+      )
+    }
+  }
+
 
   return (
     <div className="bg-background flex flex-col gap-6 py-16">
@@ -49,16 +97,7 @@ export const BlogDetail = () => {
           {currentDetail?.describe5}
         </p>
       </div>
-      <div className="max-width mx-auto flex w-full justify-between px-15">
-        <p className="font-primary flex items-center gap-0.5 cursor-pointer">
-          <img src="/svg/left-arrow-black.svg" width={13} />
-          Previous Post{" "}
-        </p>
-        <p className="font-primary flex items-center gap-0.5 cursor-pointer">
-          Next Post
-          <img src="/svg/right-arrow-black.svg" width={13} />
-        </p>
-      </div>
+      <DetailChangeAction/>
       <div className="max-width mx-auto flex w-full flex-col justify-between bg-white lg:px-[6.67rem] lg:py-[5.34rem] p-10">
         <p className="text-title1 font-primary mb-3 text-start">
           Leave a Comment
