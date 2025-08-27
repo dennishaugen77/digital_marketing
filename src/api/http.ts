@@ -1,9 +1,9 @@
-import axios, { AxiosRequestConfig, AxiosResponse, Method } from 'axios';
-import { API_URL } from '@/constants/config';
-import { store } from '@/store';
-import { spinnerActions } from "@/store/spinner/spinner.slice";
+import axios, { AxiosRequestConfig, AxiosResponse, Method } from "axios"
+import { API_URL } from "@/constants/config"
+import { store } from "@/store"
+import { spinnerActions } from "@/store/spinner/spinner.slice"
 
-const http = axios.create({ baseURL: API_URL });
+const http = axios.create({ baseURL: API_URL })
 
 const request = (
   method: Method,
@@ -12,12 +12,12 @@ const request = (
   hasSpinner = false,
 ) => {
   if (hasSpinner) {
-    store.dispatch(spinnerActions.startLoading());
+    store.dispatch(spinnerActions.startLoading())
   }
 
   const {
     authReducer: { tokens },
-  } = store.getState();
+  } = store.getState()
 
   if (tokens) {
     options = {
@@ -26,7 +26,7 @@ const request = (
         ...options.headers,
         Authorization: `Bearer ${tokens.accessToken}`,
       },
-    };
+    }
   }
 
   return http
@@ -39,39 +39,44 @@ const request = (
     .catch(httpErrorHandler)
     .finally(() => {
       if (hasSpinner) {
-        store.dispatch(spinnerActions.finishLoading());
+        store.dispatch(spinnerActions.finishLoading())
       }
-    });
-};
+    })
+}
 
 const httpResponseHandler = (response: AxiosResponse) => {
-  return response.data;
-};
+  return response.data
+}
 
 const httpErrorHandler = async (err: any) => {
-  const response = err?.response;
-  const data = response?.data;
+  const response = err?.response
+  const data = response?.data
 
   throw {
     ...data,
-    message: typeof data === 'string' ? data : (typeof data?.message === 'string' ? data?.message : 'Network Error!')
-  };
-};
+    message:
+      typeof data === "string"
+        ? data
+        : typeof data?.message === "string"
+          ? data?.message
+          : "Network Error!",
+  }
+}
 
 export const Http = {
   get(url: string, params = {}, headers = {}, hasSpinner = false) {
-    return request('GET', url, { params, headers }, hasSpinner);
+    return request("GET", url, { params, headers }, hasSpinner)
   },
   post(url: string, body = {}, headers = {}, hasSpinner = false) {
-    return request('POST', url, { data: body, headers }, hasSpinner);
+    return request("POST", url, { data: body, headers }, hasSpinner)
   },
   put(url: string, body = {}, headers = {}, hasSpinner = false) {
-    return request('PUT', url, { data: body, headers }, hasSpinner);
+    return request("PUT", url, { data: body, headers }, hasSpinner)
   },
   patch(url: string, body = {}, headers = {}, hasSpinner = false) {
-    return request('PATCH', url, { data: body, headers }, hasSpinner);
+    return request("PATCH", url, { data: body, headers }, hasSpinner)
   },
   delete(url: string, body = {}, headers = {}, hasSpinner = false) {
-    return request('DELETE', url, { data: body, headers }, hasSpinner);
+    return request("DELETE", url, { data: body, headers }, hasSpinner)
   },
-};
+}

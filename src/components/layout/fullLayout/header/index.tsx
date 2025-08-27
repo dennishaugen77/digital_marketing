@@ -138,7 +138,7 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-3">
           <SearchBar />
-          <div 
+          <div
             className="bg-primary cxl:!block font-secondary hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
             onClick={() => setOpenLoginDialog(true)}
           >
@@ -146,25 +146,29 @@ export const Header = () => {
           </div>
 
           <div
-            className={cn("cxl:!hidden block cursor-pointer border-primary border-dotted p-1.5", openList && 'border-1' )}
+            className={cn(
+              "cxl:!hidden border-primary block cursor-pointer border-dotted p-1.5",
+              openList && "border-1",
+            )}
             onClick={() => setList(!openList)}
           >
-            {
-              openList 
-                ? <Times className={cn(
+            {openList ? (
+              <Times
+                className={cn(
                   location.pathname.split("/").includes("blog")
                     ? "text-global-color3"
-                    : "text-white",)}
-                  /> 
-                : <ListIcon
-                    className={cn(
-                      location.pathname.split("/").includes("blog")
-                        ? "text-global-color3"
-                        : "text-white",
-                    )}
-                  />
-            }
-            
+                    : "text-white",
+                )}
+              />
+            ) : (
+              <ListIcon
+                className={cn(
+                  location.pathname.split("/").includes("blog")
+                    ? "text-global-color3"
+                    : "text-white",
+                )}
+              />
+            )}
           </div>
         </div>
         <div
@@ -182,7 +186,7 @@ export const Header = () => {
               >
                 <div
                   className={cn(
-                    "hover:text-primary font-secondary flex cursor-pointer justify-between items-center px-10 py-2 text-start text-xl",
+                    "hover:text-primary font-secondary flex cursor-pointer items-center justify-between px-10 py-2 text-start text-xl",
                     openResponsiveList && index === 1 && "pb-0",
                   )}
                   onClick={(e) => navigate(el.link)}
@@ -222,8 +226,16 @@ export const Header = () => {
           })}
         </div>
       </div>
-      <LoginDialog isOpen={isLoginDialogOpen} onClose={() => setOpenLoginDialog(false)} goto={gotoSignup}/>
-      <SignupDialog isOpen={isSignupDialogOpen} onClose={() => setOpenSignupDialog(false)} goto={gotoLogin}/>
+      <LoginDialog
+        isOpen={isLoginDialogOpen}
+        onClose={() => setOpenLoginDialog(false)}
+        goto={gotoSignup}
+      />
+      <SignupDialog
+        isOpen={isSignupDialogOpen}
+        onClose={() => setOpenSignupDialog(false)}
+        goto={gotoLogin}
+      />
     </div>
   )
 }

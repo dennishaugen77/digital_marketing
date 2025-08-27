@@ -1,29 +1,30 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
-import {SvgIcon} from "@/components/atoms/svgIcon";
-import { cn } from '@/utils/cn';
+import { ButtonHTMLAttributes, FC, ReactNode } from "react"
+import { SvgIcon } from "@/components/atoms/svgIcon"
+import { cn } from "@/utils/cn"
 
 type ButtonProps = {
-  children: ReactNode;
-  loading?: boolean;
-  className?: string;
-  variant?: 'primary' | 'secondary';
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+  children: ReactNode
+  loading?: boolean
+  className?: string
+  variant?: "primary" | "secondary"
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button: FC<ButtonProps> = ({
   children,
   loading,
   disabled,
-  variant = 'primary',
-  className = '',
+  variant = "primary",
+  className = "",
   ...props
 }) => {
   return (
     <button
       className={cn(
-        `relative rounded-sm px-6 h-9 flex items-center text-sm border border-transparent outline-none${className}`,
+        `relative flex h-9 items-center rounded-sm border border-transparent px-6 text-sm outline-none${className}`,
         {
-          'font-bold bg-primary text-white hover:opacity-80': variant === 'primary' && !(disabled || loading),
-          'bg-primary/30 text-gray-50 pointer-events-none': disabled || loading,
+          "bg-primary font-bold text-white hover:opacity-80":
+            variant === "primary" && !(disabled || loading),
+          "bg-primary/30 pointer-events-none text-gray-50": disabled || loading,
         },
       )}
       {...props}
@@ -37,5 +38,5 @@ export const Button: FC<ButtonProps> = ({
 
       {children}
     </button>
-  );
-};
+  )
+}

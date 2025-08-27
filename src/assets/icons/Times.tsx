@@ -11,8 +11,8 @@ export const Times: React.FC<IconProps> = ({ color, className, style }) => (
     style={{ color, ...(style || {}) }}
   >
     <g stroke="currentColor" strokeLinecap="round" strokeWidth="2">
-        <path d="M6 18L18 6"/>
-        <path d="M18 18L6 6"/>
+      <path d="M6 18L18 6" />
+      <path d="M18 18L6 6" />
     </g>
   </svg>
 )

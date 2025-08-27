@@ -23,7 +23,6 @@ export const Home = () => {
       <RelationAwards />
 
       <Reviews />
-
     </div>
   )
 }

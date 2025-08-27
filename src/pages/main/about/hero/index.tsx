@@ -18,10 +18,10 @@ export const Hero = () => {
       <div className="relative my-auto flex">
         <div className="max-width mx-auto w-full">
           <div className="clg:mr-[25%] xl:mr-[50%]">
-            <p className="clg:text-start clg:leading-20 font-primary text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
+            <p className="clg:leading-20 font-primary text-start text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
               About
             </p>
-            <p className="csm:!text-2xl clg:text-start font-secondary mt-5 text-lg font-semibold text-white">
+            <p className="csm:!text-2xl font-secondary mt-5 text-start text-lg font-semibold text-white">
               Sollicitudin eros nulla mus donec quisque convallis integer
               condimentum volutpat.
             </p>
