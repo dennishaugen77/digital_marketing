@@ -5,8 +5,8 @@ import { Starhalf } from "@/assets/icons/Starhalf"
 export const AuthorDetail = () => {
   return (
     <div className="flex bg-white">
-      <div className="max-width mx-auto flex w-full gap-12 px-15 py-25">
-        <QuoteRight className="text-primary h-18 w-18"></QuoteRight>
+      <div className="max-width mx-auto flex flex-col md:flex-row w-full gap-12 md:px-15 px-8 md:py-25 py-15">
+        <QuoteRight className="text-primary md:!h-18 !h-13 md:!w-18 !w-13"></QuoteRight>
         <div className="flex flex-col md:pr-[24%]">
           <p className="font-secondary text-start text-3xl leading-7 font-semibold text-black">
             Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
