@@ -1,6 +1,7 @@
 import React, { MouseEvent } from 'react';
-import { ReactComponent as EyeSvg } from './svg/eye.svg';
-import { ReactComponent as EyeOffSvg } from './svg/eye-off.svg';
+
+// import { ReactComponent as EyeSvg } from './svg/eye.svg';
+// import { ReactComponent as EyeOffSvg } from './svg/eye-off.svg';
 
 const iconsMap: Record<string, React.FC> = {
 //   'eye': EyeSvg,

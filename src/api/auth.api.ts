@@ -6,7 +6,7 @@ export class AuthApi {
     return Http.post('/auth/login', { username: email, password });
   }
 
-  static async register(data: any) {
+  static async register(data: { email: string, password: string, phone: string, name: string}) {
     return Http.post('/auth/register', data);
   }
 

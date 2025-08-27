@@ -62,7 +62,7 @@ import { cn } from '@/utils/cn';
             {...props}
           />
   
-          {/* {type === 'password' && (
+          {type === 'password' && (
             <SvgIcon
               className={cn(
                 'hover:opacity-80 absolute right-3 h-5 w-5 hover:cursor-pointer',
@@ -71,7 +71,7 @@ import { cn } from '@/utils/cn';
               name={defaultType ? 'eye' : 'eye-off'}
               onClick={onClickVisible}
             />
-          )} */}
+          )}
         </div>
   
         {error && <p className="text-red-700 mt-0.5 text-xs">{error}</p>}
