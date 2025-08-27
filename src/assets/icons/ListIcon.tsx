@@ -4,7 +4,7 @@ import { IconProps } from "./FooterLogo"
 export const ListIcon: React.FC<IconProps> = ({ color, className, style }) => (
   <svg
     fill={color || "currentColor"}
-    className={"h-6 w-6" + (className ? ` ${className}` : "")}
+    className={"h-5 w-5" + (className ? ` ${className}` : "")}
     viewBox="0 0 1920 1920"
     enableBackground="new 0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"

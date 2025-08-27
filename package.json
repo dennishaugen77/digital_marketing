@@ -30,6 +30,7 @@
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@hookform/resolvers": "^5.2.1",
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
@@ -44,6 +45,7 @@
     "react-router": "^7.8.1",
     "sass": "^1.90.0",
     "typescript": "^5.9.2",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vite-plugin-svgr": "^4.5.0"
   }
 }
