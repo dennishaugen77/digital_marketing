@@ -47,8 +47,8 @@ export const Footer = () => {
         </div>
       </div>
       <div className="bg-background flex">
-        <div className="mx-auto flex w-full max-w-7xl flex-col divide-y-2 divide-white">
-          <div className="grid w-full grid-cols-1 gap-4 px-10 pt-24 pb-16 md:grid-cols-4">
+        <div className="mx-auto flex w-full max-width flex-col divide-y-2 divide-white">
+          <div className="grid w-full grid-cols-1 gap-4 px-10 md:pt-24 pt-10 md:pb-16 pb-8 md:grid-cols-4">
             <div className="mx-auto max-w-300 md:max-w-50">
               <FooterLogo
                 style={{ color: "var(--color-primary)" }}

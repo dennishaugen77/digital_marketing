@@ -66,7 +66,7 @@ export const About = () => {
       </div>
 
       <div className="bg-background flex flex-col divide-y-2 divide-white px-10 pt-24 pb-16">
-        <div className="mx-auto flex w-full max-w-[1200px] flex-col pb-20 md:flex-row">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col md:pb-20 pb-10 md:flex-row">
           <div className="flex flex-col md:w-1/2">
             <p className="text-primary-light font-primary mt-2 mb-4 text-start font-semibold uppercase">
               What we do
@@ -91,7 +91,7 @@ export const About = () => {
                 return (
                   <div key={index} className="flex flex-col">
                     <div className="mx-auto">{el.icon}</div>
-                    <p className="font-primary mt-3 text-start text-2xl font-semibold text-black capitalize">
+                    <p className="font-primary md:mt-3 text-start text-2xl font-semibold text-black capitalize">
                       {el.title}
                     </p>
                     <p className="text-global-color2 font-secondary mt-3 text-start">
@@ -103,8 +103,8 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div className="relative flex px-10 pb-24">
-          <div className="mx-auto mt-40 grid w-full max-w-[1200px] grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="relative flex md:px-10 md:pb-24">
+          <div className="mx-auto md:mt-40 sm:mt-20 mt-10 grid w-full max-w-[1200px] grid-cols-1 md:gap-4 gap-y-10 md:grid-cols-3">
             {reviews.map((el, index) => {
               return (
                 <div key={index} className="md:max-w-90">
@@ -112,7 +112,7 @@ export const About = () => {
                     {Array(5)
                       .fill(0)
                       .map((_, index) => {
-                        return <Starfull className="text-primary" />
+                        return <Starfull className="text-primary" key={index}/>
                       })}
                   </div>
                   <p className="text-global-color3 font-secondary my-5 text-start">
