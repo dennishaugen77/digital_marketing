@@ -7,7 +7,7 @@ import App from "./App.js"
 
 import "./index.css"
 
-createRoot(document.getElementById("root") as HTMLElement).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
       <ThemeProvider>
