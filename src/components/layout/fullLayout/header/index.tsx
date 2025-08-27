@@ -6,6 +6,9 @@ import { useState, useEffect, useMemo } from "react"
 import { ListIcon } from "@/assets/icons/ListIcon"
 import { cn } from "@/utils/cn"
 import { useLocation, useNavigate } from "react-router"
+import { LoginDialog } from "@/components/parts/auth/login/index"
+import { SignupDialog } from "@/components/parts/auth/signup"
+import { Times } from "@/assets/icons/Times"
 
 export const Header = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -13,6 +16,8 @@ export const Header = () => {
   )
   const [openList, setList] = useState<boolean>(false)
   const [openResponsiveList, setResponsiveList] = useState<boolean>(false)
+  const [isLoginDialogOpen, setOpenLoginDialog] = useState<boolean>(false)
+  const [isSignupDialogOpen, setOpenSignupDialog] = useState<boolean>(false)
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -43,6 +48,16 @@ export const Header = () => {
     navigate(link)
     e.preventDefault()
     e.stopPropagation()
+  }
+
+  const gotoSignup = () => {
+    setOpenLoginDialog(false)
+    setOpenSignupDialog(true)
+  }
+
+  const gotoLogin = () => {
+    setOpenSignupDialog(false)
+    setOpenLoginDialog(true)
   }
 
   return (
@@ -123,26 +138,42 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-3">
           <SearchBar />
-          <div className="bg-primary cxl:!block font-secondary hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black">
+          <div
+            className="bg-primary cxl:!block font-secondary hidden cursor-pointer rounded-lg px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+            onClick={() => setOpenLoginDialog(true)}
+          >
             Get a Free Quote
           </div>
 
           <div
-            className="cxl:!hidden block cursor-pointer"
+            className={cn(
+              "cxl:!hidden border-primary block cursor-pointer border-dotted p-1.5",
+              openList && "border-1",
+            )}
             onClick={() => setList(!openList)}
           >
-            <ListIcon
-              className={cn(
-                location.pathname.split("/").includes("blog")
-                  ? "text-global-color3"
-                  : "text-white",
-              )}
-            />
+            {openList ? (
+              <Times
+                className={cn(
+                  location.pathname.split("/").includes("blog")
+                    ? "text-global-color3"
+                    : "text-white",
+                )}
+              />
+            ) : (
+              <ListIcon
+                className={cn(
+                  location.pathname.split("/").includes("blog")
+                    ? "text-global-color3"
+                    : "text-white",
+                )}
+              />
+            )}
           </div>
         </div>
         <div
           className={cn(
-            "absolute top-22 left-0 w-full bg-white",
+            "absolute top-22 -left-10 w-lvw bg-white",
             openList ? "block" : "hidden",
           )}
         >
@@ -155,7 +186,7 @@ export const Header = () => {
               >
                 <div
                   className={cn(
-                    "hover:text-primary font-secondary flex cursor-pointer justify-between px-10 py-2 text-start text-xl",
+                    "hover:text-primary font-secondary flex cursor-pointer items-center justify-between px-10 py-2 text-start text-xl",
                     openResponsiveList && index === 1 && "pb-0",
                   )}
                   onClick={(e) => navigate(el.link)}
@@ -195,6 +226,16 @@ export const Header = () => {
           })}
         </div>
       </div>
+      <LoginDialog
+        isOpen={isLoginDialogOpen}
+        onClose={() => setOpenLoginDialog(false)}
+        goto={gotoSignup}
+      />
+      <SignupDialog
+        isOpen={isSignupDialogOpen}
+        onClose={() => setOpenSignupDialog(false)}
+        goto={gotoLogin}
+      />
     </div>
   )
 }

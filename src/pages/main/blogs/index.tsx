@@ -6,8 +6,8 @@ export const Blogs = () => {
 
   return (
     <div className="bg-background flex px-10 py-16">
-      <div className="max-width mx-auto flex w-full flex-col divide-y-1 divide-gray-300 md:flex-row md:divide-x-1">
-        <div className="flex flex-col divide-y-1 divide-gray-300 md:w-[70%] md:pr-15">
+      <div className="max-width mx-auto flex w-full flex-col divide-y-1 divide-gray-300 lg:flex-row lg:!divide-x-1 lg:divide-y-0">
+        <div className="flex flex-col lg:w-[70%] lg:pr-15">
           {postList.map((el, index) => {
             return (
               <div key={index} className="mb-12 flex flex-col pb-6">
@@ -42,7 +42,7 @@ export const Blogs = () => {
             )
           })}
         </div>
-        <div className="h-100 flex-grow py-7 pl-5 md:py-0 md:pl-15">
+        <div className="h-100 flex-grow py-7 lg:py-0 lg:pl-15">
           <div className="mb-6 flex flex-col">
             <p className="text-title2 text-global-color2 font-primary mb-6 text-start font-medium">
               Recent Posts
@@ -52,7 +52,7 @@ export const Blogs = () => {
                 return (
                   <p
                     key={index}
-                    className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start font-light"
+                    className="text-global-color3 md:text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm font-light"
                     onClick={() => navigate(el.link)}
                   >
                     {el.value}
@@ -70,7 +70,7 @@ export const Blogs = () => {
                 return (
                   <p
                     key={index}
-                    className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start leading-8 font-light"
+                    className="text-global-color3 md:text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm leading-8 font-light"
                     onClick={() => navigate(el.link)}
                   >
                     {el.value}

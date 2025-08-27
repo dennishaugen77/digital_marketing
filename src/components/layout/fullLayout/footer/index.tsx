@@ -4,9 +4,9 @@ export const Footer = () => {
   return (
     <div className="flex flex-col">
       <div className="bg-[#26262c]">
-        <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 divide-y-1 divide-gray-300 px-10 py-28 md:flex-row md:divide-x-1 md:divide-y-0">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col divide-y-1 divide-gray-300 px-10 py-10 md:flex-row md:divide-x-1 md:divide-y-0 md:py-28">
           <div className="flex flex-col pb-10 md:w-1/2 md:pr-25">
-            <p className="font-primary mb-4 text-start text-4xl font-semibold text-white">
+            <p className="font-primary csm:!text-4xl mb-4 text-start text-3xl font-semibold text-white">
               Ready to take your internet marketing to the next level?
             </p>
             <p className="font-secondary text-start font-semibold text-white">
@@ -22,8 +22,8 @@ export const Footer = () => {
               massa.
             </p>
           </div>
-          <div className="flex flex-1 flex-col gap-5 md:px-20">
-            <p className="font-secondary mb-5 text-start text-4xl font-semibold text-white">
+          <div className="flex flex-1 flex-col gap-5 pt-10 md:px-10 md:pt-0 lg:px-20">
+            <p className="font-secondary csm:!text-4xl mb-5 text-start text-3xl font-semibold text-white">
               Let's talk
             </p>
             <input
@@ -47,14 +47,14 @@ export const Footer = () => {
         </div>
       </div>
       <div className="bg-background flex">
-        <div className="mx-auto flex w-full max-w-7xl flex-col divide-y-2 divide-white">
-          <div className="grid w-full grid-cols-1 gap-4 px-10 pt-24 pb-16 md:grid-cols-4">
+        <div className="max-width mx-auto flex w-full flex-col divide-y-2 divide-white">
+          <div className="grid w-full grid-cols-1 gap-4 px-10 pt-10 pb-8 md:grid-cols-4 md:pt-24 md:pb-16">
             <div className="mx-auto max-w-300 md:max-w-50">
               <FooterLogo
                 style={{ color: "var(--color-primary)" }}
                 className="mx-auto md:mx-0"
               />
-              <p className="text-global-color2 font-secondary text-center text-xl sm:text-start">
+              <p className="text-global-color2 font-secondary text-center text-sm sm:text-start sm:text-xl">
                 Volutpat commodo at dictum amet tincidunt facilisis id lorem eu
                 vitae cursus auctor laoreet fermentum.
               </p>
@@ -67,7 +67,7 @@ export const Footer = () => {
                 {serviceList.map((el, index) => {
                   return (
                     <p
-                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center sm:text-start"
+                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center text-sm sm:text-start sm:text-base"
                       key={index}
                     >
                       {el}
@@ -84,7 +84,7 @@ export const Footer = () => {
                 {agencyList.map((el, index) => {
                   return (
                     <p
-                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center sm:text-start"
+                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center text-sm sm:text-start sm:text-base"
                       key={index}
                     >
                       {el}
@@ -101,7 +101,7 @@ export const Footer = () => {
                 {contactList.map((el, index) => {
                   return (
                     <p
-                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center sm:text-start"
+                      className="hover:text-primary font-secondary cursor-pointer py-0.5 text-center text-sm sm:text-start sm:text-base"
                       key={index}
                     >
                       {el}

@@ -13,7 +13,7 @@ export const Services = () => {
             <p className="text-primary font-primary text-start font-semibold uppercase">
               Our services
             </p>
-            <p className="lg:text-title font-primary mt-8 mb-2 text-start text-5xl leading-18 font-semibold text-black">
+            <p className="lg:text-title font-primary csm:!text-5xl mt-8 mb-2 text-start text-4xl leading-18 font-semibold text-black">
               Take Your Business to the next Level
             </p>
             <p className="text-global-color2 font-secondary mt-2 mb-16 text-start text-lg font-normal">
@@ -22,15 +22,17 @@ export const Services = () => {
             </p>
           </div>
 
-          <div className="grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid w-full flex-1 grid-cols-1 gap-8 md:grid-cols-2">
             {business.map((el, index) => {
               return (
                 <div
                   key={index}
                   className="rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 >
-                  <div className="flex justify-center">{el.icon}</div>
-                  <p className="font-primary mb-4 text-center text-xl font-semibold text-black">
+                  <div className="md:justify-cente r flex justify-start text-start">
+                    {el.icon}
+                  </div>
+                  <p className="font-primary mb-4 text-start text-xl font-semibold text-black md:text-center">
                     {el.title}
                   </p>
                 </div>

@@ -8,7 +8,7 @@ export const OurServices = () => {
         <p className="text-primary font-primary text-center font-semibold uppercase">
           Our services
         </p>
-        <p className="lg:text-title font-primary mt-6 mb-2 text-center text-5xl font-semibold text-black">
+        <p className="lg:text-title font-primary mt-6 mb-2 text-center text-3xl font-semibold text-black md:text-5xl">
           Take Your Business to the next Level
         </p>
         <p className="text-global-color2 cxl:px-60 clg:px-20 font-secondary mb-16 text-center text-lg font-normal">
