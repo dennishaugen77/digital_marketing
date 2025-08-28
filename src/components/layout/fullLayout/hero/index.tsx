@@ -6,6 +6,7 @@ export const Hero = () => {
   return (
     <div className="relative flex w-full flex-col bg-[url(/images/digital-marketing-agency-hero-img-bg.jpg)] bg-cover bg-center">
       <div className="bg-global-color1/70 absolute h-full w-full"></div>
+      <div className="absolute h-full w-full bg-size-[50vw_auto] bg-right-bottom bg-no-repeat" style={{ backgroundImage: `url(/images/digital-marketing-agency-hero-img-bg-overlay.svg)` }}></div>
       <div className="relative my-auto flex px-10">
         <div className="max-width mx-auto">
           <div className="clg:mr-[25%] clg:!mb-30 mt-25 mb-7 sm:mb-30 lg:mt-57 lg:!mb-44 xl:mr-[40%]">

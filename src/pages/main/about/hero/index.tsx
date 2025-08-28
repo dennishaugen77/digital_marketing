@@ -12,7 +12,7 @@ export const Hero = () => {
     >
       <div
         className={cn(
-          "bg-global-color1/70 absolute top-0 left-0 h-full w-full",
+          "absolute top-0 left-0 h-full w-full",
         )}
       />
       <div className="relative my-auto flex">
