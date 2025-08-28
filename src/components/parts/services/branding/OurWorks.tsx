@@ -3,12 +3,12 @@ import { works } from "./dummy"
 
 export const OurWorks = () => {
   return (
-    <div className="bg-background csm:!py-15 flex px-8 py-10 md:px-16 md:py-26">
+    <div className="bg-background csm:!py-15 flex px-8 py-10 md:px-16 md:!py-26">
       <div className="max-width mx-auto flex w-full flex-col">
         <p className="font-primary pb-5 text-start text-3xl font-medium text-black sm:text-4xl md:text-5xl">
           Our Works
         </p>
-        <p className="text-global-color2 font-secondary pb-15 text-start text-lg font-medium md:md:pr-[50%]">
+        <p className="text-global-color2 font-secondary pb-15 text-start text-title3 font-medium md:md:pr-[50%]">
           Commodo ultricies lacus, faucibus nisl, ut vulputate nullam mattis
           placerat dolor nec diam neque consequat ac, vel consectetur integer
           habitant pharetra vitae.

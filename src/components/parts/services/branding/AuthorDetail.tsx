@@ -13,7 +13,7 @@ export const AuthorDetail = () => {
             vitae cursus auctor laoreet fermentum adipiscing.
           </p>
           <img src="/svg/user.svg" width={44} className="my-4" />
-          <p className="font-secondary text-start uppercase">matthew johnson</p>
+          <p className="font-secondary text-sm text-global-color2 font-medium text-start uppercase">matthew johnson</p>
           <div className="flex items-center">
             <Starfull className="text-primary" />
             <Starfull className="text-primary" />
