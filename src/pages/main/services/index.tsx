@@ -6,38 +6,65 @@ export const Services = () => {
   return (
     <div className="flex flex-col">
       <Hero />
-      <div className="bg-background relative flex flex-col bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 py-26 transition-all duration-300">
+      <div className="bg-background relative flex flex-col bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 transition-all duration-300">
         <div className="absolute right-0 h-full w-full bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
-        <div className="csm:!flex-row relative mx-auto flex w-full max-w-[1200px] flex-col items-center">
-          <div className="csm:!w-1/2 csm:!pr-16 flex flex-col">
+        <div className="extra:!flex-row relative mx-auto flex w-full max-w-[1200px] flex-col items-center py-26">
+          <div className="extra:!w-1/2 extra:!pr-16 sm:pr-[30%] flex flex-col">
             <p className="text-primary font-primary text-start font-semibold uppercase">
               Our services
             </p>
             <p className="lg:text-title font-primary csm:!text-5xl mt-8 mb-2 text-start text-4xl leading-18 font-semibold text-black">
               Take Your Business to the next Level
             </p>
-            <p className="text-global-color2 font-secondary mt-2 mb-16 text-start text-lg font-normal">
+            <p className="text-global-color2 font-secondary mt-2 mb-16 text-start font-normal">
               Id senectus facilisi enim accumsan ac aliquam suspendisse dapibus
               morbi ut sed pellentesque elementum velit dictum
             </p>
           </div>
 
-          <div className="grid w-full flex-1 grid-cols-1 gap-8 md:grid-cols-2">
-            {business.map((el, index) => {
-              return (
-                <div
-                  key={index}
-                  className="rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl"
-                >
-                  <div className="md:justify-cente r flex justify-start text-start">
-                    {el.icon}
+          <div className="flex gap-8 sm:!flex-row flex-col extra:w-auto w-full">
+            <div className="grid w-full flex-1 gap-8 md:grid-rows-1">
+              {business.map((el, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={cn(
+                      index > 2 && "!hidden",
+                      "extra:w-70 w-full rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl",
+                    )}
+                  >
+                    <div className="flex justify-start text-start">
+                      {el.icon}
+                    </div>
+                    <p className="font-primary mb-4 text-start text-2xl font-semibold text-black">
+                      {el.title}
+                    </p>
                   </div>
-                  <p className="font-primary mb-4 text-start text-xl font-semibold text-black md:text-center">
-                    {el.title}
-                  </p>
+                )
+              })}
+            </div>
+            <div className="flex sm:w-1/2">
+              <div className="my-auto extra:w-auto w-full">
+                <div className="grid w-full flex-1 gap-8 md:grid-rows-1">
+                  <div className="extra:w-70 rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                    <div className="flex justify-start text-start">
+                      {business[3].icon}
+                    </div>
+                    <p className="font-primary mb-4 text-start text-2xl font-semibold text-black">
+                      Social Media
+                    </p>
+                  </div>
+                  <div className="extra:w-70 rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                    <div className="flex justify-start text-start">
+                      {business[3].icon}
+                    </div>
+                    <p className="font-primary mb-4 text-start text-2xl font-semibold text-black">
+                      {business[3].title}
+                    </p>
+                  </div>
                 </div>
-              )
-            })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

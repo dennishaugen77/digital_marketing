@@ -2,16 +2,16 @@ import { business } from "./dummy"
 
 export const OurServices = () => {
   return (
-    <div className="bg-background relative flex bg-[url(./assets/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 py-26 transition-all duration-300">
-      <div className="absolute right-0 h-full w-full bg-[url(./assets/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col">
+    <div className="bg-background relative flex bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:70vw_auto] bg-left-bottom bg-no-repeat px-10 transition-all duration-300 lg:bg-[length:50vw_auto]">
+      <div className="absolute right-0 h-full w-full bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:70vw_auto] bg-right-top bg-no-repeat transition-all duration-300 lg:bg-[length:45vw_auto]"></div>
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col py-14 sm:py-18 lg:py-26">
         <p className="text-primary font-primary text-center font-semibold uppercase">
           Our services
         </p>
-        <p className="lg:text-title font-primary mt-6 mb-2 text-center text-3xl font-semibold text-black md:text-5xl">
+        <p className="lg:text-title font-primary mt-6 mb-2 text-center text-3xl font-medium text-black md:text-5xl">
           Take Your Business to the next Level
         </p>
-        <p className="text-global-color2 cxl:px-60 clg:px-20 font-secondary mb-16 text-center text-lg font-normal">
+        <p className="text-global-color2 cxl:px-60 clg:px-20 font-secondary mb-16 text-center text-xl font-normal">
           Id senectus facilisi enim accumsan ac aliquam suspendisse dapibus
           morbi ut sed pellentesque elementum velit dictum
         </p>
@@ -23,11 +23,11 @@ export const OurServices = () => {
                 key={index}
                 className="rounded-lg bg-white p-8 shadow-lg transition-shadow duration-300 hover:shadow-xl"
               >
-                <div className="mb-6 flex justify-center">{el.icon}</div>
+                <div className="mb-6 flex justify-start">{el.icon}</div>
                 <p className="font-primary mb-4 text-start text-2xl font-semibold text-black">
                   {el.title}
                 </p>
-                <p className="text-global-color2 font-secondary text-start text-base leading-relaxed">
+                <p className="text-global-color2 font-secondary text-start text-lg leading-relaxed">
                   {el.content}
                 </p>
               </div>

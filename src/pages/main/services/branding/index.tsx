@@ -7,11 +7,11 @@ export const Branding = () => {
   return (
     <div className="flex flex-col">
       <Hero />
-      <div className="bg-background flex flex-col">
-        <div className="csm:!py-15 mx-auto flex w-full max-w-[1200px] flex-col px-10 py-10 sm:flex-row md:py-24">
-          <div className="w-1/6 md:w-1/4"></div>
+      <div className="bg-background flex flex-col px-10">
+        <div className="csm:!py-15 mx-auto flex w-full max-w-[1200px] flex-col py-10 sm:flex-row md:!py-28">
+          <div className="w-2/11 md:w-1/4"></div>
           <div className="flex flex-1 flex-col">
-            <p className="font-primary text-start text-4xl font-medium text-black md:pr-[30%]">
+            <p className="font-primary text-start text-5xl font-medium text-black md:pr-[30%]">
               We are helping brands get where they need to be
             </p>
             <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
