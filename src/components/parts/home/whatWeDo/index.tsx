@@ -9,7 +9,7 @@ export const WhatWeDo = () => {
         </p>
         <div className="flex-1">
           <div className="flex flex-col border-b-2 border-white">
-            <p className="cxl:pr-[40%] lg:text-title font-primary csm:!text-4xl mb-10 text-start text-3xl leading-17 font-semibold text-black">
+            <p className="cxl:pr-[40%] lg:!text-title font-primary csm:!text-4xl mb-10 text-start text-3xl leading-17 font-semibold text-black">
               Full-service Internet Marketing Solutions
             </p>
             <p className="text-global-color2 font-secondary mb-10 text-start md:pr-10">
@@ -24,7 +24,7 @@ export const WhatWeDo = () => {
             {solutions.map((el, index) => {
               return (
                 <div key={index} className="flex flex-col">
-                  <div className="mx-auto">{el.icon}</div>
+                  <div>{el.icon}</div>
                   <p className="font-primary mt-3 text-start text-2xl font-semibold text-black capitalize">
                     {el.title}
                   </p>

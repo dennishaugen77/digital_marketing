@@ -11,11 +11,11 @@ export const solutions = [
   {
     title: "Marketing",
     content: "Lobortis integer nec neque facilisis lacus amet neque",
-    icon: <ObjectUnGroup style={{ fill: "var(--color-primary)" }} />,
+    icon: <PaperPlane style={{ fill: "var(--color-primary)" }} />,
   },
   {
     title: "Design",
     content: "Ut ac viverra tortor ut scelerisque tortor senectus",
-    icon: <PaperPlane style={{ fill: "var(--color-primary)" }} />,
+    icon: <ObjectUnGroup style={{ fill: "var(--color-primary)" }} />,
   },
 ]

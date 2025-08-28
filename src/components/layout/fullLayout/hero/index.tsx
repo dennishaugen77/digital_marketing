@@ -8,14 +8,14 @@ export const Hero = () => {
       <div className="bg-global-color1/70 absolute h-full w-full"></div>
       <div className="relative my-auto flex px-10">
         <div className="max-width mx-auto">
-          <div className="clg:mr-[25%] clg:!mb-30 mt-25 mb-7 sm:mb-30 lg:mt-50 lg:!mb-44 xl:mr-[40%]">
+          <div className="clg:mr-[25%] clg:!mb-30 mt-25 mb-7 sm:mb-30 lg:mt-45 lg:!mb-44 xl:mr-[40%]">
             <p className="clg:text-start font-semibold text-white uppercase">
               welcome to delectus
             </p>
-            <p className="clg:text-start clg:leading-20 font-primary mt-8 text-5xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">
+            <p className="clg:text-start clg:leading-20 font-primary mt-8 text-5xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-26">
               Leading Internet Marketing Agency Based on Florida.
             </p>
-            <p className="csm:text-2xl clg:text-start font-secondary mt-5 text-lg font-semibold text-white">
+            <p className="csm:text-[20px] clg:text-start font-secondary mt-5 text-lg font-semibold text-white">
               Sollicitudin eros nulla mus donec a quisque convallis integer
               condimentum volutpat felis sed aliquet netus dolor dictumst
               pellentesque.
