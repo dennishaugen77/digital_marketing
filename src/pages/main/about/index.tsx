@@ -20,46 +20,40 @@ export const About = () => {
 
       <div className="mx-auto grid w-full max-w-[800px] grid-cols-2 justify-between gap-5 rounded-md bg-white p-5 md:flex md:max-w-[1200px] md:p-16">
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-20">
-            <img src="/svg/google.svg" width={40}></img>
+          <div className="bg-primary flex  items-start justify-center rounded-full p-[3px] mb-auto">
+            <img src="/svg/google.svg" width={47}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
-            <p className="font-secondary text-start text-3xl font-bold md:text-6xl">
+            <p className="font-secondary text-start text-3xl font-bold md:text-extra leading-14">
               4.8
             </p>
             <p className="font-secondary font-semibold">200+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-20">
-            <img src="/svg/facebook.svg" width={30} className="mt-2"></img>
+          <div className="bg-primary flex  items-start justify-center rounded-full p-2 mb-auto">
+            <img src="/svg/facebook.svg" width={35}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
-            <p className="font-secondary text-start text-3xl font-bold md:text-6xl">
-              4.6
-            </p>
+            <p className="text-start font-secondary text-3xl font-bold md:text-extra leading-14">4.6</p>
             <p className="font-secondary font-semibold">400+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-20">
-            <img src="/svg/map.svg" width={30} className="mt-2"></img>
+          <div className="bg-primary flex  items-start justify-center rounded-full p-2 mb-auto">
+            <img src="/svg/map.svg" width={35}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
-            <p className="font-secondary text-start text-3xl font-bold md:text-6xl">
-              4.8
-            </p>
+            <p className="text-start font-secondary text-3xl font-bold md:text-extra leading-14">4.8</p>
             <p className="font-secondary font-semibold">100+ Reviews</p>
           </div>
         </div>
         <div className="flex flex-col items-center md:flex-row">
-          <div className="bg-primary flex h-11 w-12 items-start justify-center rounded-[300%] md:h-20">
-            <img src="/svg/star.svg" width={25} className="mt-2"></img>
+          <div className="bg-primary flex  items-start justify-center rounded-full p-2 mb-auto">
+            <img src="/svg/star.svg" width={33}></img>
           </div>
           <div className="flex flex-col items-center md:ml-3">
-            <p className="font-secondary text-start text-3xl font-bold md:text-6xl">
-              4.7
-            </p>
+            <p className="font-secondary text-start text-3xl font-bold md:text-extra leading-14">4.7</p>
             <p className="font-secondary font-semibold">200+ Reviews</p>
           </div>
         </div>
@@ -78,7 +72,7 @@ export const About = () => {
 
           <div className="flex-1">
             <div className="flex flex-col border-b-2 border-white">
-              <p className="text-global-color2 font-secondary mb-10 pr-10 text-start">
+              <p className="text-global-color2 font-secondary mb-10 pr-10 text-start text-title3">
                 Consequat enim mollis mauris vulputate phasellus neque, eros
                 turpis et eu adipiscing id tempor, nascetur elit vitae molestie
                 pulvinar viverra ut eu lectus mi velit cras integer tristique
@@ -94,7 +88,7 @@ export const About = () => {
                     <p className="font-primary text-start text-2xl font-semibold text-black capitalize md:mt-3">
                       {el.title}
                     </p>
-                    <p className="text-global-color2 font-secondary mt-3 text-start">
+                    <p className="text-global-color2 font-secondary mt-3 text-start text-title3">
                       {el.content}
                     </p>
                   </div>
@@ -115,7 +109,7 @@ export const About = () => {
                         return <Starfull className="text-primary" key={index} />
                       })}
                   </div>
-                  <p className="text-global-color3 font-secondary my-5 text-start">
+                  <p className="text-global-color3 font-secondary my-5 text-start text-title3">
                     {el.review}
                   </p>
                   <div className="flex items-center gap-2">

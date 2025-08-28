@@ -3,8 +3,8 @@ import { QuoteRight } from "@/assets/icons/QuoteRight"
 
 export const Specialist = () => {
   return (
-    <div className="bg-background flex">
-      <div className="max-width mx-auto flex w-full flex-col divide-y-1 divide-white px-10 py-15 md:py-26">
+    <div className="bg-background px-10 flex">
+      <div className="max-width mx-auto flex w-full flex-col divide-y-1 divide-white py-15 md:py-26">
         <div className="flex flex-col pb-15 md:flex-row md:pb-25">
           <div className="md:w-1/2">
             <p className="md:text-title text-global-color3 font-primary text-start text-3xl font-semibold sm:text-4xl md:text-5xl">
@@ -14,7 +14,7 @@ export const Specialist = () => {
           <div className="text-global-color2 mt-3 flex flex-1 flex-col gap-4 md:mt-0">
             {specialistDetail.detail.map((el, index) => {
               return (
-                <p key={index} className="font-secondary text-start">
+                <p key={index} className="font-secondary text-start text-title3">
                   {el}
                 </p>
               )
@@ -22,7 +22,7 @@ export const Specialist = () => {
           </div>
         </div>
         <div className="flex">
-          <div className="max-width mx-auto flex w-full flex-col gap-5 pt-10 md:flex-row md:gap-12 md:px-15 md:pt-25">
+          <div className="max-width mx-auto flex w-full flex-col gap-5 pt-10 md:flex-row md:gap-12 md:pt-25">
             <QuoteRight className="text-primary h-4 w-4 md:!h-18 md:!w-18"></QuoteRight>
             <div className="flex flex-col md:pr-[24%]">
               <p className="font-secondary text-start text-lg leading-10 font-semibold text-black md:text-3xl">

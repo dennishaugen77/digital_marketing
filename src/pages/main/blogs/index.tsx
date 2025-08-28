@@ -16,20 +16,20 @@ export const Blogs = () => {
                   {el.title}
                 </p>
                 <div className="text-title3 mb-5 flex flex-wrap gap-1">
-                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm whitespace-nowrap">
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-title3 whitespace-nowrap">
                     Leave a comment
                   </p>
-                  <p className="csx:!text-base text-sm">/</p>
-                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm">
+                  <p className="csx:!text-base text-title3">/</p>
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-title3">
                     Creative
                   </p>
-                  <p className="csx:!text-base text-sm">/</p>
-                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-sm">
+                  <p className="csx:!text-base text-title3">/</p>
+                  <p className="hover:text-primary font-primary csx:!text-base cursor-pointer text-title3">
                     akvarh
                   </p>
                 </div>
 
-                <p className="text-global-color2 text-start">{el.preview}</p>
+                <p className="text-global-color2 text-start text-title3">{el.preview}</p>
 
                 <p
                   className="hover:text-primary font-primary mt-6 mb-3 cursor-pointer text-start text-black"
@@ -52,7 +52,7 @@ export const Blogs = () => {
                 return (
                   <p
                     key={index}
-                    className="text-global-color3 md:text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm font-light"
+                    className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm font-light"
                     onClick={() => navigate(el.link)}
                   >
                     {el.value}
@@ -70,7 +70,7 @@ export const Blogs = () => {
                 return (
                   <p
                     key={index}
-                    className="text-global-color3 md:text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm leading-8 font-light"
+                    className="text-global-color3 text-title3 hover:text-primary font-secondary mb-1 cursor-pointer text-start text-sm leading-8 font-light"
                     onClick={() => navigate(el.link)}
                   >
                     {el.value}

@@ -49,7 +49,7 @@ export const Reviews = () => {
           </div>
           <div className="flex flex-col items-start md:flex-row">
             <div className="bg-primary flex  items-start justify-center rounded-full p-2">
-              <img src="/svg/map.svg" width={30}></img>
+              <img src="/svg/map.svg" width={35}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
               <p className="text-start font-secondary text-3xl font-bold md:text-extra leading-14">4.8</p>
@@ -58,7 +58,7 @@ export const Reviews = () => {
           </div>
           <div className="flex flex-col items-start md:flex-row">
             <div className="bg-primary flex  items-start justify-center rounded-full p-2">
-              <img src="/svg/star.svg" width={28}></img>
+              <img src="/svg/star.svg" width={33}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
               <p className="font-secondary text-start text-3xl font-bold md:text-extra leading-14">4.7</p>
