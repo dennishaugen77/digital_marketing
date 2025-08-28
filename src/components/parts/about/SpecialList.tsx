@@ -3,7 +3,7 @@ import { QuoteRight } from "@/assets/icons/QuoteRight"
 
 export const Specialist = () => {
   return (
-    <div className="bg-background px-10 flex">
+    <div className="bg-background flex px-10">
       <div className="max-width mx-auto flex w-full flex-col divide-y-1 divide-white py-15 md:py-26">
         <div className="flex flex-col pb-15 md:flex-row md:pb-25">
           <div className="md:w-1/2">
@@ -14,7 +14,10 @@ export const Specialist = () => {
           <div className="text-global-color2 mt-3 flex flex-1 flex-col gap-4 md:mt-0">
             {specialistDetail.detail.map((el, index) => {
               return (
-                <p key={index} className="font-secondary text-start text-title3">
+                <p
+                  key={index}
+                  className="font-secondary text-title3 text-start"
+                >
                   {el}
                 </p>
               )

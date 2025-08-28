@@ -3,8 +3,8 @@ import { FooterLogo } from "@/assets/icons/FooterLogo"
 export const Footer = () => {
   return (
     <div className="flex flex-col">
-      <div className="bg-[#26262c]">
-        <div className="mx-auto flex w-full max-w-[1200px] flex-col divide-y-1 divide-gray-300 px-10 py-10 md:flex-row md:divide-x-1 md:divide-y-0 md:py-28">
+      <div className="bg-[#26262c] px-10">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col divide-y-1 divide-gray-300 py-10 md:flex-row md:divide-x-1 md:divide-y-0 md:py-28">
           <div className="flex flex-col pb-10 md:w-1/2 md:pr-25">
             <p className="font-primary csm:!text-4xl mb-4 text-start text-3xl font-semibold text-white">
               Ready to take your internet marketing to the next level?
@@ -46,10 +46,10 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-background flex">
+      <div className="bg-background flex px-10">
         <div className="max-width mx-auto flex w-full flex-col divide-y-2 divide-white">
-          <div className="grid w-full grid-cols-1 gap-4 px-10 pt-10 pb-8 md:grid-cols-4 md:pt-24 md:pb-16">
-            <div className="mx-auto max-w-300 md:max-w-50">
+          <div className="grid w-full grid-cols-1 gap-4 pt-10 pb-8 md:grid-cols-4 md:pt-24 md:pb-16">
+            <div className="md:mr-auto mx-auto max-w-300 md:max-w-60">
               <FooterLogo
                 style={{ color: "var(--color-primary)" }}
                 className="mx-auto md:mx-0"
@@ -59,7 +59,7 @@ export const Footer = () => {
                 vitae cursus auctor laoreet fermentum.
               </p>
             </div>
-            <div className="mx-auto max-w-300 md:max-w-50">
+            <div className="md:mr-auto mx-auto max-w-300 md:max-w-60">
               <p className="text-global-color3 font-primary text-center text-2xl sm:text-start">
                 Service
               </p>
@@ -76,7 +76,7 @@ export const Footer = () => {
                 })}
               </div>
             </div>
-            <div className="mx-auto max-w-300 md:max-w-50">
+            <div className="md:mr-auto mx-auto max-w-300 md:max-w-60">
               <p className="text-global-color3 font-primary text-center text-2xl sm:text-start">
                 Agency
               </p>
@@ -93,7 +93,7 @@ export const Footer = () => {
                 })}
               </div>
             </div>
-            <div className="mx-auto max-w-300 md:max-w-50">
+            <div className="md:mr-auto mx-auto max-w-300 md:max-w-60">
               <p className="text-global-color3 font-primary text-center text-2xl sm:text-start">
                 Contact Info
               </p>

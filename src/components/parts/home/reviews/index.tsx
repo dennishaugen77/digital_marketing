@@ -16,7 +16,11 @@ export const Reviews = () => {
               </div>
               <p className="mt-7 mb-5 text-start text-white">{el.review}</p>
               <div className="flex items-center gap-3">
-                <img src={`/public/images/digital-marketing-agency-reviewer-img-${index+1}.jpg`} className="rounded-full" width={40} />
+                <img
+                  src={`/public/images/digital-marketing-agency-reviewer-img-${index + 1}.jpg`}
+                  className="rounded-full"
+                  width={40}
+                />
                 <p className="font-secondary text-start text-white uppercase">
                   {el.name}
                 </p>
@@ -26,42 +30,48 @@ export const Reviews = () => {
         })}
       </div>
       <div className="absolute top-0 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 px-10">
-        <div className="border-primary mx-auto grid w-full max-w-[800px] grid-cols-2 justify-between gap-5 rounded-lg border-2 bg-white p-6 md:flex md:max-w-[1200px] md:p-16">
-          <div className="flex flex-col items-start md:flex-row">
-            <div className="bg-primary flex  items-start justify-center rounded-full p-[3px]">
+        <div className="border-primary mx-auto grid w-full max-w-[800px] grid-cols-2 justify-between gap-5 rounded-lg border-2 bg-white p-6 clg:!flex md:max-w-[1200px] lg:p-16">
+          <div className="flex clg:!flex-row flex-col items-center justify-center">
+            <div className="bg-primary flex items-start justify-center rounded-full p-[3px] ">
               <img src="/svg/google.svg" width={47}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
-              <p className="font-secondary text-start text-3xl font-bold md:text-extra leading-14">
+              <p className="font-secondary lg:text-extra md:text-4xl text-start text-3xl leading-14 font-bold">
                 4.8
               </p>
               <p className="font-secondary font-semibold">200+ Reviews</p>
             </div>
           </div>
-          <div className="flex flex-col items-start md:flex-row">
-            <div className="bg-primary flex  items-start justify-center rounded-full p-2">
+          <div className="flex clg:!flex-row flex-col items-center justify-center">
+            <div className="bg-primary flex items-start justify-center rounded-full p-2">
               <img src="/svg/facebook.svg" width={35}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
-              <p className="text-start font-secondary text-3xl font-bold md:text-extra leading-14">4.6</p>
+              <p className="font-secondary lg:text-extra md:text-4xl text-start text-3xl leading-14 font-bold">
+                4.6
+              </p>
               <p className="font-secondary font-semibold">400+ Reviews</p>
             </div>
           </div>
-          <div className="flex flex-col items-start md:flex-row">
-            <div className="bg-primary flex  items-start justify-center rounded-full p-2">
+          <div className="flex clg:!flex-row flex-col items-center justify-center">
+            <div className="bg-primary flex items-start justify-center rounded-full p-2">
               <img src="/svg/map.svg" width={35}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
-              <p className="text-start font-secondary text-3xl font-bold md:text-extra leading-14">4.8</p>
+              <p className="font-secondary lg:text-extra md:text-4xl text-start text-3xl leading-14 font-bold">
+                4.8
+              </p>
               <p className="font-secondary font-semibold">100+ Reviews</p>
             </div>
           </div>
-          <div className="flex flex-col items-start md:flex-row">
-            <div className="bg-primary flex  items-start justify-center rounded-full p-2">
+          <div className="flex clg:!flex-row flex-col items-center justify-center">
+            <div className="bg-primary flex items-start justify-center rounded-full p-2">
               <img src="/svg/star.svg" width={33}></img>
             </div>
             <div className="flex flex-col items-center md:ml-3">
-              <p className="font-secondary text-start text-3xl font-bold md:text-extra leading-14">4.7</p>
+              <p className="font-secondary lg:text-extra md:text-4xl text-start text-3xl leading-14 font-bold">
+                4.7
+              </p>
               <p className="font-secondary font-semibold">200+ Reviews</p>
             </div>
           </div>

@@ -8,8 +8,8 @@ export const Services = () => {
       <Hero />
       <div className="bg-background relative flex flex-col bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:50vw_auto] bg-left-bottom bg-no-repeat px-10 transition-all duration-300">
         <div className="absolute right-0 h-full w-full bg-[url(/images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:45vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
-        <div className="csm:!flex-row relative mx-auto flex w-full max-w-[1200px] flex-col items-center py-26">
-          <div className="csm:!w-1/2 csm:!pr-16 flex flex-col">
+        <div className="extra:!flex-row relative mx-auto flex w-full max-w-[1200px] flex-col items-center py-26">
+          <div className="extra:!w-1/2 extra:!pr-16 sm:pr-[30%] flex flex-col">
             <p className="text-primary font-primary text-start font-semibold uppercase">
               Our services
             </p>
@@ -22,15 +22,18 @@ export const Services = () => {
             </p>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex gap-8 sm:!flex-row flex-col extra:w-auto w-full">
             <div className="grid w-full flex-1 gap-8 md:grid-rows-1">
               {business.map((el, index) => {
                 return (
                   <div
                     key={index}
-                    className={cn(index > 2 && "!hidden", "rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl w-70")}
+                    className={cn(
+                      index > 2 && "!hidden",
+                      "extra:w-70 w-full rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl",
+                    )}
                   >
-                    <div className=" flex justify-start text-start">
+                    <div className="flex justify-start text-start">
                       {el.icon}
                     </div>
                     <p className="font-primary mb-4 text-start text-2xl font-semibold text-black">
@@ -40,10 +43,10 @@ export const Services = () => {
                 )
               })}
             </div>
-            <div className="flex">
-              <div className="my-auto">
+            <div className="flex sm:w-1/2">
+              <div className="my-auto extra:w-auto w-full">
                 <div className="grid w-full flex-1 gap-8 md:grid-rows-1">
-                  <div className="rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl w-70">
+                  <div className="extra:w-70 rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl">
                     <div className="flex justify-start text-start">
                       {business[3].icon}
                     </div>
@@ -51,7 +54,7 @@ export const Services = () => {
                       Social Media
                     </p>
                   </div>
-                  <div className="rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl w-70">
+                  <div className="extra:w-70 rounded-lg bg-white px-8 pt-3 pb-0 shadow-lg transition-shadow duration-300 hover:shadow-xl">
                     <div className="flex justify-start text-start">
                       {business[3].icon}
                     </div>

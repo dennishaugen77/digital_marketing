@@ -91,7 +91,12 @@ export const Hero = () => {
       <div className="relative my-auto flex">
         <div className="max-width mx-auto w-full">
           <div className="clg:mr-[25%] xl:mr-[50%]">
-            <p className={cn(!isServicesStyle && "mt-34", "font-primary text-start font-semibold text-white uppercase")}>
+            <p
+              className={cn(
+                !isServicesStyle && "mt-34",
+                "font-primary text-start font-semibold text-white uppercase",
+              )}
+            >
               {selectedTab.suffix}
             </p>
             <p className="clg:leading-18 font-primary font-primary text-start text-4xl font-semibold text-white lg:text-6xl xl:text-[4.5rem] xl:leading-28">

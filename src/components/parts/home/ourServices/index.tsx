@@ -2,9 +2,9 @@ import { business } from "./dummy"
 
 export const OurServices = () => {
   return (
-    <div className="bg-background relative flex bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] lg:bg-[length:50vw_auto] bg-[length:70vw_auto] bg-left-bottom bg-no-repeat px-10 transition-all duration-300">
-      <div className="absolute right-0 h-full w-full bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] lg:bg-[length:45vw_auto] bg-[length:70vw_auto] bg-right-top bg-no-repeat transition-all duration-300"></div>
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col lg:py-26 sm:py-18 py-14">
+    <div className="bg-background relative flex bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-2.svg)] bg-[length:70vw_auto] bg-left-bottom bg-no-repeat px-10 transition-all duration-300 lg:bg-[length:50vw_auto]">
+      <div className="absolute right-0 h-full w-full bg-[url(./images/digital-marketing-agency-arc-stroke-white-grad-1.svg)] bg-[length:70vw_auto] bg-right-top bg-no-repeat transition-all duration-300 lg:bg-[length:45vw_auto]"></div>
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col py-14 sm:py-18 lg:py-26">
         <p className="text-primary font-primary text-center font-semibold uppercase">
           Our services
         </p>
